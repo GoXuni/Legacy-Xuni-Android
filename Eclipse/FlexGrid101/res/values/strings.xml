@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">FlexGrid101</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="gettingStarted">Getting Started</string>
+    <string name="columnDefinitions">Column Definitions</string>
+    <string name="selectionModes">Selection Modes</string>
+    <string name="editing">Editing</string>
+    <string name="editConfirm">Edit Confirmation</string>
+    <string name="customCells">Custom Cells</string>
+    <string name="grouping">Grouping</string>
+    <string name="filter">Filter</string>
+    <string name="fullFilter">Full-Text Filter</string>
+    <string name="columnLayout">Column Layout</string>
+    <string name="conditionalFormatting">Conditional Formatting</string>
+    <string name="gettingStartedDesc">Display, edit and aggregate your data all at once with FlexGrid</string>
+    <string name="columnDefinitionsDesc">Shows how to specify and format columns</string>
+    <string name="selectionModesDesc">Shows the various cell selection modes</string>
+    <string name="editingDesc">Edit cells by input form rather than inline</string>
+    <string name="editConfirmDesc">Shows how to prompt the user with a confirmation dialog before committing changes to a cell</string>
+    <string name="customCellsDesc">Customizes a cell by displaying a numeric value in a gauge</string>
+    <string name="groupingDesc">Groups and aggregates a collection of videos</string>
+    <string name="filterDesc">Filters the data by columns through a generated form</string>
+    <string name="fullFilterDesc">Filters and highlights the data across all columns</string>
+    <string name="columnLayoutDesc">Shows the column manager to modify the column layout</string>
+    <string name="conditionalFormattingDesc">Uses a CellFactory to apply conditional formatting</string>
+    <string name="editRow">Edit Row</string>
+    <string name="editColumns">Edit Columns</string>
+    <string name="id">ID</string>
+    <string name="save">Save</string>
+    <string name="cancel">Cancel</string>
+    <string name="apply">Apply</string>
+    <string name="name">Name</string>
+    <string name="country">Country</string>
+    <string name="active">Active</string>
+    <string name="first">First</string>
+    <string name="last">Last</string>
+    <string name="hired">Hired</string>
+    <string name="weight">Weight</string>
+    <string name="father">Father</string>
+    <string name="brother">Brother</string>
+    <string name="cousin">Cousin</string>
+    <string name="actionFilter">Filter</string>
+    <string name="actionFilterRemove">Remove Filter</string>
+    <string name="actionEditRow">Edit Row</string>
+    <string name="confirmEditTitle">Confirm Edit</string>
+    <string name="minus">-</string>
+    <string name="plus">+</string>
+    <string name="moveDown">&#x2193;</string>
+    <string name="moveUp">&#x2191;</string>
+
+    <string-array name="selectionModeSpinnerValues">
+        <item>RowRange</item>
+        <item>Row</item>
+        <item>CellRange</item>
+        <item>Cell</item>
+        <item>None</item>
+    </string-array>
+    <string-array name="filterSpinnerValues">
+        <item>Contains</item>
+        <item>Equals</item>
+        <item>StartsWith</item>
+        <item>EndsWith</item>
+    </string-array>
+
+</resources>

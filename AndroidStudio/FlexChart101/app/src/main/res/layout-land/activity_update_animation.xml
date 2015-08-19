@@ -1,0 +1,66 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal"
+    tools:context="${relativePackage}.${activityClass}" >
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:orientation="vertical" >
+
+        <TextView
+            android:id="@+id/chartType"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="bottom"
+            android:text="@string/chartType" />
+
+        <Spinner
+            android:id="@+id/chartTypeSpinner"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:id="@+id/updatePosition"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="bottom"
+            android:text="@string/updatePosition" />
+
+        <Spinner
+            android:id="@+id/animationModeSpinner"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:id="@+id/updates"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/updates" />
+
+        <Button
+            android:id="@+id/buttonAddPoint"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/addPoint" />
+
+        <Button
+            android:id="@+id/buttonRemovePoint"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/removePoint" />
+    </LinearLayout>
+
+    <com.grapecity.xuni.flexchart.FlexChart
+        android:id="@+id/flexchart"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="3"
+        app:flexChart_chartType="COLUMN" >
+    </com.grapecity.xuni.flexchart.FlexChart>
+
+</LinearLayout>

@@ -1,0 +1,14 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <item
+        android:id="@+id/actionFilter"
+        android:icon="@drawable/ic_filter"
+        android:showAsAction="always"
+        android:title="@string/actionFilter"/>
+    <item
+        android:id="@+id/actionFilterRemove"
+        android:icon="@drawable/ic_filter_remove"
+        android:showAsAction="ifRoom"
+        android:title="@string/actionFilterRemove"/>
+
+</menu>

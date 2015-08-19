@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.grapecity.xuni.samples.flexpie"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk
+        android:minSdkVersion="14"
+        android:targetSdkVersion="22" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/icon"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+        <activity
+            android:name=".MainActivity"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".BasicFeaturesActivity" android:label="@string/basic_features"></activity>
+        <activity android:name=".GettingStartedActivity" android:label="@string/getting_started"></activity>
+        <activity android:name=".LegendAndTitlesActivity" android:label="@string/legend_and_titles"></activity>
+        <activity android:name=".SelectionActivity" android:label="@string/selection"></activity>
+        <activity android:name=".ThemingActivity" android:label="@string/theming"></activity>
+        <activity android:name=".SnapshotActivity" android:label="@string/snapshot"></activity>
+        <activity android:name=".UpdateAnimationActivity" android:label="@string/update_animation"></activity>
+        <activity android:name=".DataLabelsActivity" android:label="@string/data_labels"></activity>
+        <activity android:name=".CustomTooltipActivity" android:label="@string/data_labels"></activity>
+    </application>
+
+</manifest>

@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">FlexPie101</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="getting_started">Getting Started</string>
+    <string name="basic_features">Basic Features</string>
+    <string name="legend_and_titles">Legend And Titles</string>
+    <string name="selection">Selection</string>
+    <string name="theming">Theming</string>
+    <string name="snapshot">Export Image</string>
+    <string name="update_animation">Update Animation</string>
+    <string name="data_labels">Data Labels</string>
+    <string name="custom_tooltip">Custom Tooltips</string>
+    <string name="getting_started_desc">Shows a sample pie chart with tooltips</string>
+    <string name="basic_features_desc">Control inner radius, offset and start angle</string>
+    <string name="legend_and_titles_desc">Control header, footer and legend positioning</string>
+    <string name="selection_desc">Control selection offset and position</string>
+    <string name="theming_desc_desc">Shows the ability to customize styles</string>
+    <string name="snapshot_desc">Shows how to export an image of FlexPie</string>
+    <string name="update_animation_desc">Shows the animation options</string>
+    <string name="data_labels_desc">Shows a simple chart with data labels</string>
+    <string name="custom_tooltip_desc">Shows a customized tooltip</string>
+    <string name="inner_radius">Inner Radius</string>
+    <string name="offset">Offset</string>
+    <string name="start_angle">Start Angle</string>
+    <string name="reversed">Reversed?</string>
+    <string name="minus">-</string>
+    <string name="plus">+</string>
+    <string name="header">Header</string>
+    <string name="footer">Footer</string>
+    <string name="header_value">Fruit By Value</string>
+    <string name="footer_value">2014 GrapeCity, inc.</string>
+    <string name="legend_position">Legend Position</string>
+    <string name="item_offset">Selected Item Offset</string>
+    <string name="position">Position</string>
+    <string name="animated">IsAnimated?</string>
+    <string name="animation_mode">Load Animation Mode</string>
+    <string name="actionSnapshot">Take Snapshot</string>
+    <string name="button2015">2015</string>
+    <string name="button2014">2014</string>
+    <string name="button2013">2013</string>
+    <string name="button2012">2012</string>
+
+    <string-array name="legend_spinner_values">
+        <item>None</item>
+        <item>Left</item>
+        <item>Top</item>
+        <item>Right</item>
+        <item>Bottom</item>
+        <item>Auto</item>
+    </string-array>
+
+    <string-array name="selection_spinner_values">
+        <item>None</item>
+        <item>Left</item>
+        <item>Top</item>
+        <item>Right</item>
+        <item>Bottom</item>
+    </string-array>
+
+    <string-array name="theme_spinner_values">
+        <item>Standard</item>
+        <item>Cocoa</item>
+        <item>Coral</item>
+        <item>Dark</item>
+        <item>HighContrast</item>
+        <item>Light</item>
+        <item>Midnight</item>
+        <item>Minimal</item>
+        <item>Organic</item>
+        <item>Slate</item>
+        <item>Zen</item>
+        <item>Cyborg</item>
+        <item>Superhero</item>
+        <item>Flatly</item>
+        <item>Darkly</item>
+        <item>Cerulean</item>
+    </string-array>
+
+    <string-array name="animation_spinner_values">
+        <item>All</item>
+        <item>Point</item>
+    </string-array>
+
+    <string-array name="dataLabelSpinnerValues">
+        <item>None</item>
+        <item>Center</item>
+        <item>Inside</item>
+        <item>Outside</item>
+    </string-array>
+
+</resources>

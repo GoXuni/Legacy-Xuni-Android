@@ -1,0 +1,25 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="${relativePackage}.${activityClass}" >
+
+    <com.grapecity.xuni.flexchart.FlexChart
+        android:id="@+id/flexchart"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:flexChart_axisX_titleFontTypeface="ITALIC"
+        app:flexChart_axisY_format="@string/axisYFormat2"
+        app:flexChart_axisY_titleFontTypeface="ITALIC"
+        app:flexChart_footer="@string/chartFooter"
+        app:flexChart_footerFontColor="#FF0000"
+        app:flexChart_footerFontGravity="CENTER_HORIZONTAL"
+        app:flexChart_footerFontSize="10"
+        app:flexChart_header="@string/chartHeader"
+        app:flexChart_headerFontColor="#FF0000"
+        app:flexChart_headerFontGravity="CENTER_HORIZONTAL"
+        app:flexChart_headerFontSize="20" >
+    </com.grapecity.xuni.flexchart.FlexChart>
+
+</LinearLayout>

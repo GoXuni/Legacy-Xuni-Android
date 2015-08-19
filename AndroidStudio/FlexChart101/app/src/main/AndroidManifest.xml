@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.grapecity.xuni.samples.flexchart"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk
+        android:minSdkVersion="14"
+        android:targetSdkVersion="22" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/icon"
+        android:label="@string/appName"
+        android:theme="@style/AppTheme" >
+        <activity
+            android:name=".MainActivity"
+            android:label="@string/appName" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".GettingStartedActivity" android:label="@string/gettingStarted"></activity>
+        <activity android:name=".AnimationOptionsActivity" android:label="@string/animationOptions"></activity>
+        <activity android:name=".UpdateAnimationActivity" android:label="@string/updateAnimation"></activity>
+        <activity android:name=".ConditionalFormattingActivity" android:label="@string/conditionalFormatting"></activity>
+        <activity android:name=".BasicChartTypesActivity" android:label="@string/basicChartTypes"></activity>
+        <activity android:name=".BubbleChartActivity" android:label="@string/bubbleChart"></activity>
+        <activity android:name=".CustomizingAxesActivity" android:label="@string/customizingAxes"></activity>
+        <activity android:name=".CustomPlotElementsActivity" android:label="@string/customPlotElements"></activity>
+        <activity android:name=".CustomTooltipsActivity" android:label="@string/customTooltips"></activity>
+        <activity android:name=".DataLabelsActivity" android:label="@string/dataLabels"></activity>
+        <activity android:name=".DynamicChartsActivity" android:configChanges="orientation|screenSize" android:label="@string/dynamicCharts"></activity>
+        <activity android:name=".FinancialChartTypesActivity" android:label="@string/financialChart"></activity>
+        <activity android:name=".HitTestActivity" android:label="@string/hitTest"></activity>
+        <activity android:name=".LegendAndTitlesActivity" android:label="@string/legendAndTitles"></activity>
+        <activity android:name=".MixedChartTypesActivity" android:label="@string/mixedChartTypes"></activity>
+        <activity android:name=".MultipleAxesActivity" android:label="@string/multipleAxes"></activity>
+        <activity android:name=".SelectionModesActivity" android:label="@string/selectionModes"></activity>
+        <activity android:name=".StylingSeriesActivity" android:label="@string/stylingSeries"></activity>
+        <activity android:name=".ThemingActivity" android:label="@string/theming"></activity>
+        <activity android:name=".ToggleSeriesActivity" android:label="@string/toggleSeries"></activity>
+        <activity android:name=".ZoomingAndScrollingActivity" android:label="@string/zoomingAndScrolling"></activity>
+        <activity android:name=".SnapshotActivity" android:label="@string/snapshot"></activity>
+        <activity android:name=".ScrollingActivity" android:label="@string/scrolling"></activity>
+    </application>
+
+</manifest>

@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="appName">FlexChart101</string>
+    <string name="helloWorld">Hello world!</string>
+    <string name="gettingStarted">Getting Started</string>
+    <string name="basicChartTypes">Basic Chart Types</string>
+    <string name="mixedChartTypes">Mixed Chart Types</string>
+    <string name="financialChart">Financial Charts</string>
+    <string name="bubbleChart">Bubble Chart</string>
+    <string name="customTooltips">Custom Tooltips</string>
+    <string name="dataLabels">Data Labels</string>
+    <string name="theming">Theming</string>
+    <string name="stylingSeries">Styling Series</string>
+    <string name="customizingAxes">Customizing Axes</string>
+    <string name="legendAndTitles">Legend And Titles</string>
+    <string name="selectionModes">Selection Modes</string>
+    <string name="toggleSeries">Toggle Series</string>
+    <string name="animationOptions">Load Animation Mode</string>
+    <string name="dynamicCharts">Dynamic Charts</string>
+    <string name="scrolling">Scrolling</string>
+    <string name="zoomingAndScrolling">Zooming And Scrolling</string>
+    <string name="hitTest">Hit test</string>
+    <string name="multipleAxes">Multiple Axes</string>
+    <string name="customPlotElements">Custom Plot Elements</string>
+    <string name="snapshot">Export Image</string>
+    <string name="conditionalFormatting">Conditional Formatting</string>
+    <string name="updateAnimation">Update Animation</string>
+    <string name="gettingStartedDesc">Shows a simple chart with tooltips</string>
+    <string name="basicChartTypesDesc">Shows the basic chart types and stacking options</string>
+    <string name="mixedChartTypesDesc">Shows a composite chart</string>
+    <string name="financialChartDesc">Shows stock data in a candle chart</string>
+    <string name="bubbleChartDesc">Shows a bubble chart</string>
+    <string name="customTooltipsDesc">Shows a customized tooltip</string>
+    <string name="dataLabelsDesc">Shows a simple chart with data labels</string>
+    <string name="themingDesc">Shows the built-in palettes</string>
+    <string name="stylingSeriesDesc">Shows customized series styling</string>
+    <string name="customizingAxesDesc">Shows customized axes style and label format</string>
+    <string name="legendAndTitlesDesc">Shows custom chart headers and axis titles</string>
+    <string name="selectionModesDesc">Shows the different selection modes</string>
+    <string name="toggleSeriesDesc">Shows the ability to turn a series on and off</string>
+    <string name="animationOptionsDesc">Shows animation modes when data is loaded</string>
+    <string name="dynamicChartsDesc">Shows a dynamic, "live" chart</string>
+    <string name="scrollingDesc">Shows a chart with panning (or scrolling) along the axes</string>
+    <string name="zoomingAndScrollingDesc">Shows touch-based zooming and scrolling in FlexChart</string>
+    <string name="hitTestDesc">This view demonstrates the use of the FlexChart\'s hitTest method</string>
+    <string name="multipleAxesDesc">This view demonstrates the use of the FlexChart\'s multiple axes</string>
+    <string name="customPlotElementsDesc">This view demonstrates how to customize plot elements</string>
+    <string name="conditionalFormattingDesc">Shows conditional formatting</string>
+    <string name="updateAnimationDesc">Shows the animation options</string>
+    <string name="snapshotDesc">Shows how to export an image of FlexChart</string>
+    <string name="chartType">Chart Type</string>
+    <string name="stacking">Stacking</string>
+    <string name="rotated">Rotated?</string>
+    <string name="palette">Palette</string>
+    <string name="selectionMode">Selection Mode</string>
+    <string name="sales">Sales</string>
+    <string name="expenses">Expenses</string>
+    <string name="downloads">Downloads</string>
+    <string name="animationMode">Animation Mode</string>
+    <string name="zoomMode">Zoom Mode</string>
+    <string name="updates">Updates:</string>
+    <string name="addPoint">Add Point</string>
+    <string name="removePoint">Remove Point</string>
+    <string name="updatePosition">Update Position</string>
+    <string name="dataLabel">Data Label</string>
+    <string name="axisYFormat1">#.##</string>
+    <string name="axisYFormat2">$#,###</string>
+    <string name="axisXFormat1">MM/dd/yyyy</string>
+    <string name="chartHeader">Sample Chart</string>
+    <string name="chartFooter">2014 GrapeCity, Inc.</string>
+    <string name="actionSnapshot">Take Snapshot</string>
+
+    <string-array name="chartTypeSpinnerValues">
+        <item>Area</item>
+        <item>SplineArea</item>
+        <item>SplineSymbols</item>
+        <item>Spline</item>
+        <item>LineSymbol</item>
+        <item>Line</item>
+        <item>Scatter</item>
+        <item>Bar</item>
+        <item>Column</item>
+    </string-array>
+    <string-array name="stackingSpinnerValues">
+        <item>None</item>
+        <item>Stacked</item>
+        <item>Stacked100pc</item>
+    </string-array>
+    <string-array name="financialTypeSpinnerValues">
+        <item>Candle</item>
+        <item>Hloc</item>
+    </string-array>
+    <string-array name="paletteSpinnerValues">
+        <item>Standard</item>
+        <item>Cocoa</item>
+        <item>Coral</item>
+        <item>Dark</item>
+        <item>HighContrast</item>
+        <item>Light</item>
+        <item>Midnight</item>
+        <item>Minimal</item>
+        <item>Organic</item>
+        <item>Slate</item>
+        <item>Zen</item>
+        <item>Cyborg</item>
+        <item>Superhero</item>
+        <item>Flatly</item>
+        <item>Darkly</item>
+        <item>Cerulean</item>
+    </string-array>
+    <string-array name="selectionModeSpinnerValues">
+        <item>Point</item>
+        <item>Series</item>
+        <item>None</item>
+    </string-array>
+    <string-array name="animationModeSpinnerValues">
+        <item>Point</item>
+        <item>Series</item>
+        <item>All</item>
+    </string-array>
+    <string-array name="zoomModeSpinnerValues">
+        <item>XY</item>
+        <item>X</item>
+        <item>Y</item>
+        <item>Disabled</item>
+    </string-array>
+    <string-array name="updatePositionSpinnerValues">
+        <item>Beginning</item>
+        <item>Middle</item>
+        <item>End</item>
+    </string-array>
+    <string-array name="dataLabelSpinnerValues">
+        <item>Right</item>
+        <item>Top</item>
+        <item>Left</item>
+        <item>Bottom</item>
+    </string-array>
+
+</resources>

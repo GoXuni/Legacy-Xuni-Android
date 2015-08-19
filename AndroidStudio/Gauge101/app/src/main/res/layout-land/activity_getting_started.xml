@@ -1,0 +1,98 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal" >
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        android:padding="10dp" >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="@string/value" />
+
+            <TextView
+                android:id="@+id/valueText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="50dp"
+                android:layout_marginTop="10dp"
+                android:paddingLeft="5dp" />
+
+            <Button
+                android:id="@+id/buttonValueMinus"
+                style="?android:attr/buttonStyleSmall"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="25dp"
+                android:layout_toRightOf="@id/valueText"
+                android:clickable="true"
+                android:onClick="onClick"
+                android:text="@string/minus" />
+
+            <Button
+                android:id="@+id/buttonValuePlus"
+                style="?android:attr/buttonStyleSmall"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@+id/buttonValueMinus"
+                android:clickable="true"
+                android:onClick="onClick"
+                android:text="@string/plus" />
+        </RelativeLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/lineargauge" />
+
+        <com.grapecity.xuni.gauge.XuniLinearGauge
+            android:id="@+id/linearGauge1"
+            android:layout_width="match_parent"
+            android:layout_height="50dp" >
+        </com.grapecity.xuni.gauge.XuniLinearGauge>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/bulletgraph" />
+
+        <com.grapecity.xuni.gauge.XuniBulletGraph
+            android:id="@+id/bulletGraph1"
+            android:layout_width="match_parent"
+            android:layout_height="50dp" >
+        </com.grapecity.xuni.gauge.XuniBulletGraph>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        android:padding="10dp" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/radialgauge" />
+
+        <com.grapecity.xuni.gauge.XuniRadialGauge
+            android:id="@+id/radialGauge1"
+            android:layout_width="match_parent"
+            android:layout_height="250dp" >
+        </com.grapecity.xuni.gauge.XuniRadialGauge>
+    </LinearLayout>
+
+</LinearLayout>

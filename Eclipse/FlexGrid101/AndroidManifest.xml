@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.grapecity.xuni.samples.flexgrid"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk
+        android:minSdkVersion="14"
+        android:targetSdkVersion="22" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/icon"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme"
+        android:configChanges="orientation|screenSize" >
+        <activity
+            android:name=".MainActivity"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+            </activity>
+        <activity android:name=".GettingStartedActivity" android:label="@string/gettingStarted"></activity>
+        <activity android:name=".ColumnDefinitionsActivity" android:label="@string/columnDefinitions"></activity>
+        <activity android:name=".SelectionModesActivity" android:label="@string/selectionModes"></activity>
+        <activity android:name=".EditingActivity" android:configChanges="orientation|screenSize" android:label="@string/editing"></activity>
+        <activity android:name=".EditConfirmationActivity" android:label="@string/editConfirm"></activity>
+        <activity android:name=".CustomCellsActivity" android:label="@string/customCells"></activity>
+        <activity android:name=".GroupingActivity" android:label="@string/grouping"></activity>
+        <activity android:name=".FilterActivity" android:configChanges="orientation|screenSize" android:label="@string/filter"></activity>
+        <activity android:name=".FullFilterActivity" android:label="@string/fullFilter"></activity>
+        <activity android:name=".ColumnLayoutActivity" android:configChanges="orientation|screenSize" android:label="@string/columnLayout"></activity>
+        <activity android:name=".ConditionalFormattingActivity" android:label="@string/conditionalFormatting"></activity>
+    </application>
+
+</manifest>
