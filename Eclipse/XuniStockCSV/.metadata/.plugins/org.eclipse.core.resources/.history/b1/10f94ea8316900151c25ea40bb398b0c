@@ -1,0 +1,37 @@
+package com.example.xunistockcsv;
+
+import java.io.BufferedWriter;
+import java.io.OutputStream;
+import java.text.ParseException;
+
+import com.grapecity.xuni.core.ObservableList;
+
+public class SaveCSV {
+	//OutputStream os;
+	//public SaveCSV(OutputStream os){
+	//	this.os = os;
+	//}
+	public void save(ObservableList<StockData> list){
+		//BufferedWriter writer = new BufferedWriter();
+		for(int i = 0; i < list.size(); i++){
+			StockData sd = list.get(i);
+			/*
+			writer.append(sd.ticker.toString());
+			writer.append(sd.date.toString());
+			writer.append(String.valueOf(sd.open));
+			writer.append(String.valueOf(sd.high));
+			writer.append(String.valueOf(sd.low));
+			writer.append(String.valueOf(sd.close));
+			writer.append(String.valueOf(sd.volume));
+			*/
+			System.out.println(sd.ticker.toString());
+			System.out.println(sd.date.toString());
+			System.out.println(String.valueOf(sd.open));
+			System.out.println(String.valueOf(sd.high));
+			System.out.println(String.valueOf(sd.low));
+			System.out.println(String.valueOf(sd.close));
+			System.out.println(String.valueOf(sd.volume));
+		}
+		
+	}
+}

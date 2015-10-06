@@ -1,0 +1,61 @@
+package com.example.xunistockcsv;
+
+import java.io.BufferedWriter;
+import java.io.File;
+import java.io.FileWriter;
+import java.io.IOException;
+import java.io.OutputStream;
+import java.text.ParseException;
+
+import com.grapecity.xuni.core.ObservableList;
+
+public class SaveCSV {
+	File file;
+	public SaveCSV(File file){
+		this.file = file;
+	}
+	public void save(ObservableList<StockData> list){
+		if(file.exists() == false){
+			try {
+				file.createNewFile();
+			} catch (IOException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+		}
+		try {			
+			FileWriter writer = new FileWriter(file);
+			for(int i = 0; i < list.size(); i++){
+				StockData sd = list.get(i);
+				
+				writer.append(sd.ticker.toString());
+				writer.append(',');
+				writer.append(sd.date.toString());
+				writer.append(',');
+				writer.append(String.valueOf(sd.open));
+				writer.append(',');
+				writer.append(String.valueOf(sd.high));
+				writer.append(',');
+				writer.append(String.valueOf(sd.low));
+				writer.append(',');
+				writer.append(String.valueOf(sd.close));
+				writer.append(',');
+				writer.append(String.valueOf(sd.volume));
+				writer.append('\n');
+				
+				System.out.println(sd.ticker.toString());
+				System.out.println(sd.date.toString());
+				System.out.println(String.valueOf(sd.open));
+				System.out.println(String.valueOf(sd.high));
+				System.out.println(String.valueOf(sd.low));
+				System.out.println(String.valueOf(sd.close));
+				System.out.println(String.valueOf(sd.volume));
+			}
+			writer.flush();
+			writer.close();
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+	}
+}

@@ -1,0 +1,10 @@
+INDEX VERSION 1.127+/Users/kelleyricker/Documents/XuniStockCSV/.metadata/.plugins/org.eclipse.jdt.core
+644360405.index
+3881813483.index
+2184593881.index
+2707523094.index
+2358081913.index
+1867037349.index
+344112180.index
+3832603513.index
+2018312447.index

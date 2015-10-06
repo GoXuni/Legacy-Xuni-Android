@@ -1,0 +1,67 @@
+package com.example.xunistockcsv;
+
+import java.io.File;
+import java.io.InputStream;
+import java.io.OutputStream;
+import java.text.ParseException;
+import java.util.List;
+
+import android.app.Activity;
+import android.os.Bundle;
+import android.view.Menu;
+import android.view.MenuItem;
+import android.view.View;
+import android.view.View.OnClickListener;
+import android.widget.Button;
+
+import com.grapecity.xuni.core.*;
+import com.grapecity.xuni.flexgrid.*;
+
+public class MainActivity extends Activity {
+	private FlexGrid grid;
+	private Button b;
+	@Override
+	protected void onCreate(Bundle savedInstanceState) {
+		super.onCreate(savedInstanceState);
+		com.grapecity.xuni.core.LicenseManager.KEY = License.KEY;
+		setContentView(R.layout.activity_main);
+        grid = (FlexGrid)findViewById(R.id.flexgrid);
+        b = (Button)findViewById(R.id.button1);
+		InputStream in = getResources().openRawResource(R.raw.stock);
+		final String uri = "android.resource://" + getPackageName() + "/" + R.raw.stock;
+		ReadCSV csv = new ReadCSV(in);
+		StockData stock = new StockData();
+		final ObservableList<StockData> stockList;
+		stockList = stock.getList(csv.read());
+		grid.setItemsSource(stockList);
+		grid.setAutoGenerateColumns(true); 
+		grid.autoSizeColumns(0, grid.getColumns().size() - 1);
+	    grid.setReadOnly(true);
+	    b.setOnClickListener(new OnClickListener(){
+	    	public void onClick(View v){
+	    		File file = new File(uri);
+	    		SaveCSV sCSV = new SaveCSV(file);
+	    		sCSV.save(stockList);
+	    	}
+	    });
+	}
+
+	@Override
+	public boolean onCreateOptionsMenu(Menu menu) {
+		// Inflate the menu; this adds items to the action bar if it is present.
+		getMenuInflater().inflate(R.menu.main, menu);
+		return true;
+	}
+
+	@Override
+	public boolean onOptionsItemSelected(MenuItem item) {
+		// Handle action bar item clicks here. The action bar will
+		// automatically handle clicks on the Home/Up button, so long
+		// as you specify a parent activity in AndroidManifest.xml.
+		int id = item.getItemId();
+		if (id == R.id.action_settings) {
+			return true;
+		}
+		return super.onOptionsItemSelected(item);
+	}
+}

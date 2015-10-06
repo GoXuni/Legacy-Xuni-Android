@@ -1,0 +1,57 @@
+package com.example.xunistockcsv;
+import java.io.InputStream;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.util.Date;
+import java.util.List;
+import java.util.Locale;
+
+import android.text.format.DateFormat;
+import com.grapecity.xuni.core.*;
+
+public class StockData {
+	protected String ticker;
+	protected Date date;
+	protected double open;
+	protected double high;
+	protected double low;
+	protected double close;
+	protected int volume;
+	
+	public StockData(){
+		this.ticker = "";
+		this.date = new Date();
+		this.open = 0.0;
+		this.high = 0.0;
+		this.low = 0.0;
+		this.close = 0.0;
+		this.volume = 0;
+	}
+	public StockData(String ticker, Date date, double open, double high, double low, double close, int volume){
+		this.ticker = ticker;
+		this.date = date;
+		this.open = open;
+		this.high = high;
+		this.low = low;
+		this.close = close;
+		this.volume = volume;
+	}
+	public ObservableList<StockData> getList(List<String[]> stocks) throws ParseException{
+		ObservableList<StockData> list = new ObservableList<StockData>();
+		String[] sarray;
+		//DateFormat format;
+		SimpleDateFormat format = new SimpleDateFormat("dd-MM-yyyy", Locale.ENGLISH);
+		StockData sd = new StockData();
+		for(int i = 0; i < stocks.size(); i++){
+				sarray = stocks.get(i);
+				sd.ticker = sarray[0];
+				sd.date = format.parse(sarray[1]);
+				sd.open = Double.parseDouble(sarray[2]);
+				sd.high = Double.parseDouble(sarray[3]);
+				sd.low = Double.parseDouble(sarray[4]);
+				sd.close = Double.parseDouble(sarray[5]);
+				sd.volume = Integer.parseInt(sarray[6]);
+		}
+		return list;
+	}
+}

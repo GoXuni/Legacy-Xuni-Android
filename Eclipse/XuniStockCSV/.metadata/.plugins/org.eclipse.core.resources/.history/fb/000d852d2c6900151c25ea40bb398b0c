@@ -1,0 +1,20 @@
+package com.example.xunistockcsv;
+
+import java.io.BufferedWriter;
+import java.io.OutputStream;
+
+import com.grapecity.xuni.core.ObservableList;
+
+public class SaveCSV {
+	//OutputStream os;
+	//public SaveCSV(OutputStream os){
+	//	this.os = os;
+	//}
+	public void save(ObservableList<StockData> list){
+		//list.toArray();
+		System.out.println(java.util.Arrays.toString(list.toArray(new String[list.size()])).replaceAll("[", "\"").replaceAll("[", "\""));
+		
+		//BufferedWriter writer = new BufferedWriter(new OutputStream os);
+		
+	}
+}
