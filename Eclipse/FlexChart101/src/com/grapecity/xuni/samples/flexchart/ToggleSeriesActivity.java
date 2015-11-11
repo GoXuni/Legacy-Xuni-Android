@@ -1,16 +1,18 @@
 package com.grapecity.xuni.samples.flexchart;
 
-import android.app.Activity;
 import android.os.Bundle;
 import android.widget.CompoundButton;
 import android.widget.CompoundButton.OnCheckedChangeListener;
 import android.widget.Switch;
 
-import com.grapecity.xuni.flexchart.*;
+import com.grapecity.xuni.core.ObservableList;
+import com.grapecity.xuni.flexchart.ChartSeries;
+import com.grapecity.xuni.flexchart.ChartSeriesVisibilityType;
+import com.grapecity.xuni.flexchart.ChartType;
+import com.grapecity.xuni.flexchart.FlexChart;
 
-public class ToggleSeriesActivity extends Activity
+public class ToggleSeriesActivity extends BaseActivity
 {
-
 	private FlexChart mChart;
 	private Switch mSalesSwitch;
 	private Switch mExpensesSwitch;
@@ -33,8 +35,11 @@ public class ToggleSeriesActivity extends Activity
 
 		// set the binding for X-axis of FlexChart
 		mChart.setBindingX("name");
-		
-		//enable ability to toggle a series visibility by touching the series in the actual legend.
+
+		// set the chart type
+		mChart.setChartType(ChartType.LINE);
+
+		// enable ability to toggle a series visibility by touching the series in the actual legend.
 		mChart.setToggleLegend(true);
 
 		// initialize series elements and set the binding to variables of
@@ -48,8 +53,17 @@ public class ToggleSeriesActivity extends Activity
 		mChart.getSeries().add(mSeriesExpenses);
 		mChart.getSeries().add(mSeriesDownloads);
 
-		// setting the source of data/items and default values in FlexPie
-		mChart.setItemsSource(ChartPoint.getList());
+		// setting the source of data/items in FlexChart
+		if (dataSource == null && savedInstanceState != null)
+		{
+			dataSource = (ObservableList<ChartPoint>) savedInstanceState.getSerializable(DATA_SOURCE);
+		}
+		else
+		{
+			dataSource = ChartPoint.getList();
+		}
+		mChart.setItemsSource(dataSource);
+
 		mSalesSwitch.setChecked(true);
 		mExpensesSwitch.setChecked(true);
 		mDownloadsSwitch.setChecked(true);

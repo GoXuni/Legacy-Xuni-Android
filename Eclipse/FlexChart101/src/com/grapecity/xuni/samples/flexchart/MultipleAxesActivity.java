@@ -36,7 +36,7 @@ public class MultipleAxesActivity extends Activity
 		mChart.getSeries().add(seriesPrecipitation);
 		mChart.getSeries().add(seriesTemperature);
 
-		// setting the source of data/items and default values in FlexPie
+		// setting the source of data/items and default values in FlexChart
 		mChart.setItemsSource(getList());
 		seriesTemperature.setChartType(ChartType.SPLINESYMBOLS);
 
@@ -46,6 +46,7 @@ public class MultipleAxesActivity extends Activity
 		// mChart.getAxisY().setTitleFontSize(15);
 		mChart.getAxisY().setMajorUnit(2d);
 		mChart.getAxisY().setTitleFontColor(Color.parseColor("#88bde6"));
+		mChart.getAxisY().setAxisLineVisible(false);
 
 		// create a new axis and customize it
 		ChartAxis axisYRight = new ChartAxis(mChart, ChartPositionType.RIGHT);
@@ -60,6 +61,7 @@ public class MultipleAxesActivity extends Activity
 		axisYRight.setMinorTickWidth(0);
 		axisYRight.setMajorGridWidth(0);
 		axisYRight.setTitleFontColor(Color.parseColor("#fbb258"));
+		axisYRight.setMajorTickWidth(1);
 
 		mChart.getAxisX().setMajorTickWidth(2);
 		mChart.getAxisX().setLabelAngle(90);

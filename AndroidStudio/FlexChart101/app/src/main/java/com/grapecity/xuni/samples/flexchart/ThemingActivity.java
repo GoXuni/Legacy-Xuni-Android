@@ -1,6 +1,5 @@
 package com.grapecity.xuni.samples.flexchart;
 
-import android.app.Activity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
@@ -8,10 +7,12 @@ import android.widget.AdapterView.OnItemSelectedListener;
 import android.widget.ArrayAdapter;
 import android.widget.Spinner;
 
-import com.grapecity.xuni.chartcore.*;
-import com.grapecity.xuni.flexchart.*;
+import com.grapecity.xuni.chartcore.Palettes;
+import com.grapecity.xuni.core.ObservableList;
+import com.grapecity.xuni.flexchart.ChartSeries;
+import com.grapecity.xuni.flexchart.FlexChart;
 
-public class ThemingActivity extends Activity
+public class ThemingActivity extends BaseActivity
 {
 
 	private FlexChart mChart;
@@ -41,8 +42,16 @@ public class ThemingActivity extends Activity
 		mChart.getSeries().add(series_expenses);
 		mChart.getSeries().add(series_downloads);
 
-		// setting the source of data/items in FlexPie
-		mChart.setItemsSource(ChartPoint.getList());
+		// setting the source of data/items in FlexChart
+		if (dataSource == null && savedInstanceState != null)
+		{
+			dataSource = (ObservableList<ChartPoint>) savedInstanceState.getSerializable(DATA_SOURCE);
+		}
+		else
+		{
+			dataSource = ChartPoint.getList();
+		}
+		mChart.setItemsSource(dataSource);
 
 		// create custom adapter for spinner and initialize with string array
 		ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this, R.array.paletteSpinnerValues, android.R.layout.simple_spinner_item);
@@ -120,4 +129,5 @@ public class ThemingActivity extends Activity
 			}
 		});
 	}
+
 }

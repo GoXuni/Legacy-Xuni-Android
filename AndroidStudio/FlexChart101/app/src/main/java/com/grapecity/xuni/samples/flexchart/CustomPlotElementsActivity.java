@@ -28,7 +28,9 @@ public class CustomPlotElementsActivity extends Activity
 
 		// set the binding for X-axis of FlexChart
 		mChart.setBindingX("name");
-
+		// set no animated.
+		mChart.setAnimated(false);
+		
 		// initialize series elements and set the binding to variables of
 		// ChartPoint
 		ChartSeries seriesdevices = new ChartSeries(mChart, "Devices sold", "devicesSold");
@@ -36,9 +38,16 @@ public class CustomPlotElementsActivity extends Activity
 		// add series to list
 		mChart.getSeries().add(seriesdevices);
 
-		// setting the source of data/items in FlexPie
+		// setting the source of data/items in FlexChart
 		mChart.setItemsSource(CustomPoint.getList(getApplicationContext()));
-
+		
+		// Set axis Y title.
+		mChart.getAxisY().setTitle("Devices Sold (billions)");
+		// Set axis Y line invisible.
+		mChart.getAxisY().setAxisLineVisible(false);
+		// Set axis Y minor tick marker invisible.
+		mChart.getAxisY().setMinorTickWidth(0);
+				
 		// handler to override the existing call() which is called before
 		// rendering each chart element and customize the required elements
 		mChart.getPlotElementLoading().addHandler(new IEventHandler()
@@ -67,7 +76,7 @@ public class CustomPlotElementsActivity extends Activity
 
 						// render border
 						args.renderEngine.setStrokeWidth(2);
-						args.renderEngine.setFill(Color.BLACK);
+						args.renderEngine.setFill(Color.GRAY);
 						Rect bounds = args.region;
 						args.renderEngine.drawRectEmpty(bounds.left, bounds.top, bounds.right - bounds.left, bounds.bottom - bounds.top);
 					}

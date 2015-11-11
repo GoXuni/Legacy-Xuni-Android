@@ -1,6 +1,6 @@
 package com.grapecity.xuni.samples.flexchart;
 
-import android.app.Activity;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
@@ -8,15 +8,21 @@ import android.widget.AdapterView.OnItemSelectedListener;
 import android.widget.ArrayAdapter;
 import android.widget.Spinner;
 
-import com.grapecity.xuni.chartcore.*;
-import com.grapecity.xuni.flexchart.*;
+import com.grapecity.xuni.chartcore.ChartSelectionModeType;
+import com.grapecity.xuni.core.ObservableList;
+import com.grapecity.xuni.flexchart.ChartSeries;
+import com.grapecity.xuni.flexchart.ChartType;
+import com.grapecity.xuni.flexchart.FlexChart;
 
-public class SelectionModesActivity extends Activity
+public class SelectionModesActivity extends BaseActivity
 {
 
 	private FlexChart mChart;
 	private Spinner mChartTypeSpinner;
 	private Spinner mSelectionModeSpinner;
+
+	private static final String SELECTED_SERIES_NAME = "SELECTED_SERIES_NAME";
+	private static final String SELECTED_ELEMENT_INDEX = "SELECTED_ELEMENT_INDEX";
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState)
@@ -43,8 +49,44 @@ public class SelectionModesActivity extends Activity
 		mChart.getSeries().add(seriesExpenses);
 		mChart.getSeries().add(seriesDownloads);
 
-		// setting the source of data/items in FlexPie
-		mChart.setItemsSource(ChartPoint.getList());
+		// setting the source of data/items in FlexChart
+		if (dataSource == null && savedInstanceState != null)
+		{
+			dataSource = (ObservableList<ChartPoint>) savedInstanceState.getSerializable(DATA_SOURCE);
+		}
+		else
+		{
+			dataSource = ChartPoint.getList();
+		}
+		mChart.setItemsSource(dataSource);
+
+		if (savedInstanceState != null)
+		{
+			String selectedSeriesName = savedInstanceState.getString(SELECTED_SERIES_NAME);
+			if (selectedSeriesName != null)
+			{
+				for (ChartSeries series : mChart.getSeries())
+				{
+					String seriesName = series.getName();
+					if (selectedSeriesName.equals(seriesName))
+					{
+						mChart.setSelection(series);
+						break;
+					}
+				}
+			}
+
+			String selectedIndex = savedInstanceState.getString(SELECTED_ELEMENT_INDEX);
+			if (selectedIndex != null)
+			{
+				int selectedSeriesElementIndex = Integer.parseInt(selectedIndex);
+				mChart.setSelectedSeriesElementIndex(selectedSeriesElementIndex);
+			}
+
+		}
+
+		// setting the selected border color.
+		mChart.setSelectedBorderColor(Color.RED);
 
 		// create custom adapter for first spinner and initialize with string
 		// array
@@ -133,5 +175,18 @@ public class SelectionModesActivity extends Activity
 
 			}
 		});
+	}
+
+	@Override
+	protected void onSaveInstanceState(Bundle outState)
+	{
+		ChartSeries selectedSeries = mChart.getSelection();
+		String seriesName = selectedSeries.getName();
+		int index = mChart.getSelectedSeriesElementIndex();
+
+		outState.putString(SELECTED_SERIES_NAME, seriesName);
+		outState.putString(SELECTED_ELEMENT_INDEX, index + "");
+
+		super.onSaveInstanceState(outState);
 	}
 }

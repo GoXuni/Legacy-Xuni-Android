@@ -2,7 +2,7 @@ package com.grapecity.xuni.samples.flexchart;
 
 import java.util.Random;
 
-import android.app.Activity;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.view.View;
 import android.view.View.OnClickListener;
@@ -12,10 +12,12 @@ import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.Spinner;
 
-import com.grapecity.xuni.core.*;
-import com.grapecity.xuni.flexchart.*;
+import com.grapecity.xuni.core.ObservableList;
+import com.grapecity.xuni.flexchart.ChartSeries;
+import com.grapecity.xuni.flexchart.ChartType;
+import com.grapecity.xuni.flexchart.FlexChart;
 
-public class UpdateAnimationActivity extends Activity
+public class UpdateAnimationActivity extends BaseActivity
 {
 
 	private ObservableList<ChartPoint> mList;
@@ -51,11 +53,22 @@ public class UpdateAnimationActivity extends Activity
 		// ChartPoint
 		ChartSeries seriesSales = new ChartSeries(mChart, "Value", "count");
 
+		seriesSales.setColor(Color.BLUE);
+
 		// add series to list
 		mChart.getSeries().add(seriesSales);
 
-		// setting the source of data/items and default values in FlexPie
-		mChart.setItemsSource(getList());
+		// setting the source of data/items and default values in FlexChart
+		if (dataSource == null && savedInstanceState != null)
+		{
+			dataSource = (ObservableList<ChartPoint>) savedInstanceState.getSerializable(DATA_SOURCE);
+		}
+		else
+		{
+			dataSource = getList();
+		}
+		mChart.setItemsSource(dataSource);
+
 		// property set in XML layout
 		// mChart.setChartType(ChartType.COLUMN);
 

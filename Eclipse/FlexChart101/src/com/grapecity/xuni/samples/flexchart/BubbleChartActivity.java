@@ -31,7 +31,7 @@ public class BubbleChartActivity extends Activity
 		mChart.getSeries().add(seriesSales);
 		mChart.getSeries().add(seriesExpenses);
 
-		// setting the source of data/items and default values in FlexPie
+		// setting the source of data/items and default values in FlexChart
 		mChart.setItemsSource(ChartPoint.getList());
 		// property set in XML layout
 		// mChart.setChartType(ChartType.BUBBLE);

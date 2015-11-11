@@ -1,6 +1,5 @@
 package com.grapecity.xuni.samples.flexchart;
 
-import android.app.Activity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
@@ -11,11 +10,14 @@ import android.widget.CompoundButton.OnCheckedChangeListener;
 import android.widget.Spinner;
 import android.widget.Switch;
 
-import com.grapecity.xuni.flexchart.*;
+import com.grapecity.xuni.core.ObservableList;
+import com.grapecity.xuni.flexchart.ChartSeries;
+import com.grapecity.xuni.flexchart.ChartStackingType;
+import com.grapecity.xuni.flexchart.ChartType;
+import com.grapecity.xuni.flexchart.FlexChart;
 
-public class BasicChartTypesActivity extends Activity
+public class BasicChartTypesActivity extends BaseActivity
 {
-
 	private FlexChart mChart;
 	private Spinner mChartTypeSpinner;
 	private Spinner mStackingSpinner;
@@ -47,8 +49,16 @@ public class BasicChartTypesActivity extends Activity
 		mChart.getSeries().add(series_expenses);
 		mChart.getSeries().add(series_downloads);
 
-		// setting the source of data/items in FlexPie
-		mChart.setItemsSource(ChartPoint.getList());
+		// setting the source of data/items in FlexChart
+		if (dataSource == null && savedInstanceState != null)
+		{
+			dataSource = (ObservableList<ChartPoint>) savedInstanceState.getSerializable(DATA_SOURCE);
+		}
+		else
+		{
+			dataSource = ChartPoint.getList();
+		}
+		mChart.setItemsSource(dataSource);
 
 		// create custom adapter for first spinner and initialize with string
 		// array
@@ -149,4 +159,5 @@ public class BasicChartTypesActivity extends Activity
 			}
 		});
 	}
+
 }

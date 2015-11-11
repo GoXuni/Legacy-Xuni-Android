@@ -1,6 +1,5 @@
 package com.grapecity.xuni.samples.flexchart;
 
-import android.app.Activity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
@@ -8,10 +7,14 @@ import android.widget.AdapterView.OnItemSelectedListener;
 import android.widget.ArrayAdapter;
 import android.widget.Spinner;
 
-import com.grapecity.xuni.chartcore.*;
-import com.grapecity.xuni.flexchart.*;
+import com.grapecity.xuni.chartcore.AnimationMode;
+import com.grapecity.xuni.chartcore.Palettes;
+import com.grapecity.xuni.core.ObservableList;
+import com.grapecity.xuni.flexchart.ChartSeries;
+import com.grapecity.xuni.flexchart.ChartType;
+import com.grapecity.xuni.flexchart.FlexChart;
 
-public class AnimationOptionsActivity extends Activity
+public class AnimationOptionsActivity extends BaseActivity
 {
 
 	private FlexChart mChart;
@@ -43,8 +46,17 @@ public class AnimationOptionsActivity extends Activity
 		mChart.getSeries().add(seriesExpenses);
 		mChart.getSeries().add(seriesDownloads);
 
-		// setting the source of data/items in FlexPie
-		mChart.setItemsSource(ChartPoint.getList());
+		// setting the source of data/items in FlexChart
+		if (dataSource == null && savedInstanceState != null)
+		{
+			dataSource = (ObservableList<ChartPoint>) savedInstanceState.getSerializable(DATA_SOURCE);
+		}
+		else
+		{
+			dataSource = ChartPoint.getList();
+		}
+		mChart.setItemsSource(dataSource);
+				
 		mChart.setPalette(Palettes.MODERN);
 
 		// create custom adapter for first spinner and initialize with string

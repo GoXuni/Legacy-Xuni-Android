@@ -8,8 +8,7 @@
     <com.grapecity.xuni.flexgrid.FlexGrid
         android:id="@+id/flexgrid"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        app:autoGenerateColumns="false" >
+        android:layout_height="match_parent">
     </com.grapecity.xuni.flexgrid.FlexGrid>
 
 </RelativeLayout>

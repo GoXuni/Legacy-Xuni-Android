@@ -4,6 +4,9 @@
     android:versionCode="1"
     android:versionName="1.0" >
 
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    
     <uses-sdk
         android:minSdkVersion="14"
         android:targetSdkVersion="22" />
@@ -23,17 +26,20 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
             </activity>
-        <activity android:name=".GettingStartedActivity" android:label="@string/gettingStarted"></activity>
-        <activity android:name=".ColumnDefinitionsActivity" android:label="@string/columnDefinitions"></activity>
-        <activity android:name=".SelectionModesActivity" android:label="@string/selectionModes"></activity>
-        <activity android:name=".EditingActivity" android:configChanges="orientation|screenSize" android:label="@string/editing"></activity>
-        <activity android:name=".EditConfirmationActivity" android:label="@string/editConfirm"></activity>
-        <activity android:name=".CustomCellsActivity" android:label="@string/customCells"></activity>
-        <activity android:name=".GroupingActivity" android:label="@string/grouping"></activity>
-        <activity android:name=".FilterActivity" android:configChanges="orientation|screenSize" android:label="@string/filter"></activity>
-        <activity android:name=".FullFilterActivity" android:label="@string/fullFilter"></activity>
-        <activity android:name=".ColumnLayoutActivity" android:configChanges="orientation|screenSize" android:label="@string/columnLayout"></activity>
-        <activity android:name=".ConditionalFormattingActivity" android:label="@string/conditionalFormatting"></activity>
+        <activity android:name="com.grapecity.xuni.samples.flexgrid.samples.GettingStartedActivity" android:label="@string/gettingStarted"></activity>
+        <activity android:name="com.grapecity.xuni.samples.flexgrid.samples.ColumnDefinitionsActivity" android:label="@string/columnDefinitions"></activity>
+        <activity android:name="com.grapecity.xuni.samples.flexgrid.samples.SelectionModesActivity" android:label="@string/selectionModes"></activity>
+        <activity android:name="com.grapecity.xuni.samples.flexgrid.samples.EditingActivity" android:configChanges="orientation|screenSize" android:label="@string/editing"></activity>
+        <activity android:name="com.grapecity.xuni.samples.flexgrid.samples.EditConfirmationActivity" android:label="@string/editConfirm"></activity>
+        <activity android:name="com.grapecity.xuni.samples.flexgrid.samples.CustomCellsActivity" android:label="@string/customCells"></activity>
+        <activity android:name="com.grapecity.xuni.samples.flexgrid.samples.GroupingActivity" android:label="@string/grouping"></activity>
+        <activity android:name="com.grapecity.xuni.samples.flexgrid.samples.FilterActivity" android:configChanges="orientation|screenSize" android:label="@string/filter"></activity>
+        <activity android:name="com.grapecity.xuni.samples.flexgrid.samples.FullFilterActivity" android:label="@string/fullFilter"></activity>
+        <activity android:name="com.grapecity.xuni.samples.flexgrid.samples.ColumnLayoutActivity" android:configChanges="orientation|screenSize" android:label="@string/columnLayout"></activity>
+        <activity android:name="com.grapecity.xuni.samples.flexgrid.samples.ConditionalFormattingActivity" android:label="@string/conditionalFormatting"></activity>
+        <activity android:name="com.grapecity.xuni.samples.flexgrid.samples.StarSizingActivity" android:label="@string/starSizing"></activity>
+        <activity android:name="com.grapecity.xuni.samples.flexgrid.samples.CellFreezingActivity" android:label="@string/cellFreezing"></activity>
+        <activity android:name="com.grapecity.xuni.samples.flexgrid.samples.OnDemandActivity" android:label="@string/onDemand"></activity>
     </application>
 
 </manifest>

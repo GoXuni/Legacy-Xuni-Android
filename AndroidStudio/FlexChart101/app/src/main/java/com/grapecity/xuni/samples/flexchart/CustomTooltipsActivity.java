@@ -1,9 +1,13 @@
 package com.grapecity.xuni.samples.flexchart;
 
 import android.app.Activity;
+import android.content.res.Configuration;
 import android.os.Bundle;
 
-import com.grapecity.xuni.flexchart.*;
+import com.grapecity.xuni.chartcore.Palettes;
+import com.grapecity.xuni.flexchart.ChartSeries;
+import com.grapecity.xuni.flexchart.ChartStackingType;
+import com.grapecity.xuni.flexchart.FlexChart;
 
 public class CustomTooltipsActivity extends Activity
 {
@@ -33,10 +37,24 @@ public class CustomTooltipsActivity extends Activity
 		mChart.getSeries().add(seriesExpenses);
 		mChart.getSeries().add(seriesDownloads);
 
-		// setting the source of data/items in FlexPie
+		mChart.setStackingType(ChartStackingType.STACKED);
+		mChart.setPalette(Palettes.COCOA);
+
+		// setting the source of data/items in FlexChart
 		mChart.setItemsSource(ChartPoint.getList());
 
 		// set custom tooltip
 		mChart.getTooltip().setContent(new MyToolTip(mChart, getApplicationContext()));
+	}
+
+	@Override
+	public void onConfigurationChanged(Configuration newConfig)
+	{
+		super.onConfigurationChanged(newConfig);
+		// Checks the orientation of the screen
+		if (newConfig.orientation == Configuration.ORIENTATION_LANDSCAPE || newConfig.orientation == Configuration.ORIENTATION_PORTRAIT)
+		{
+			mChart.getTooltip().getContent().hide(mChart);
+		}
 	}
 }

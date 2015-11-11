@@ -38,7 +38,7 @@ public class ScrollingActivity extends Activity
 		mChart.getSeries().add(seriesLow);
 		mChart.getSeries().add(seriesHigh);
 
-		// setting the source of data/items and default values in FlexPie
+		// setting the source of data/items and default values in FlexChart
 		mChart.setItemsSource(getList());
 		seriesLow.setChartType(ChartType.SPLINE);
 		seriesLow.setColor(Color.GREEN);
@@ -54,6 +54,9 @@ public class ScrollingActivity extends Activity
 		mChart.getAxisY().setMinorGridVisible(false);
 		mChart.getAxisY().setMajorGridVisible(true);
 		mChart.getAxisY().setAxisLineVisible(false);
+		
+		// Set zoom mode X
+		mChart.setZoomMode(ZoomMode.X);
 
 		// create a new axis and customize it
 		ChartAxis axisYRight = new ChartAxis(mChart, ChartPositionType.RIGHT);
@@ -62,7 +65,8 @@ public class ScrollingActivity extends Activity
 		axisYRight.setName("RIGHT");
 		axisYRight.setAxisLineVisible(false);
 		axisYRight.setMajorGridVisible(false);
-		axisYRight.setMax(100d);
+		axisYRight.setMajorTickWidth(1);
+		axisYRight.setMinorTickWidth(0);
 		axisYRight.setAxisLineVisible(false);
 
 		axisYRight.setTitleFontColor(Color.parseColor("#fbb258"));

@@ -43,8 +43,8 @@ public class StylingSeriesActivity extends Activity
 		seriesDownloads.setChartType(ChartType.LINESYMBOLS);
 		seriesDownloads.setColor(Color.BLUE);
 		seriesDownloads.setSymbolColor(Color.YELLOW);
-		seriesDownloads.setSymbolBorderWidth(11);
-		seriesDownloads.setSymbolBorderColor(Color.YELLOW);
+		seriesDownloads.setSymbolBorderWidth(3);
+		seriesDownloads.setSymbolBorderColor(Color.CYAN);
 		seriesDownloads.setBorderWidth(10);
 
 		// add series to list
@@ -52,7 +52,7 @@ public class StylingSeriesActivity extends Activity
 		mChart.getSeries().add(seriesExpenses);
 		mChart.getSeries().add(seriesDownloads);
 
-		// setting the source of data/items in FlexPie
+		// setting the source of data/items in FlexChart
 		mChart.setItemsSource(ChartPoint.getList());
 	}
 }

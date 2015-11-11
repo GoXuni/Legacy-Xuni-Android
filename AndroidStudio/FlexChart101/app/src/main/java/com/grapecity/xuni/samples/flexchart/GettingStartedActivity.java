@@ -37,7 +37,7 @@ public class GettingStartedActivity extends Activity
 		mChart.getSeries().add(seriesExpenses);
 		mChart.getSeries().add(seriesDownloads);
 
-		// setting the source of data/items in FlexPie
+		// setting the source of data/items in FlexChart
 		mChart.setItemsSource(ChartPoint.getList());
 
 		// mChart.getAxisX().setOrigin(Float.valueOf((float) 4.0));

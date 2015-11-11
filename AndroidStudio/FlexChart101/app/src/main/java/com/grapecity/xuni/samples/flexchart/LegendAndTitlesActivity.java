@@ -18,6 +18,7 @@ public class LegendAndTitlesActivity extends Activity
 
 		// initializing widgets
 		mChart = (FlexChart) findViewById(R.id.flexchart);
+		mChart.setChartType(ChartType.SCATTER);
 
 		// set the binding for X-axis of FlexChart
 		mChart.setBindingX("name");
@@ -33,11 +34,11 @@ public class LegendAndTitlesActivity extends Activity
 		mChart.getSeries().add(seriesExpenses);
 		mChart.getSeries().add(seriesDownloads);
 
-		// setting the source of data/items in FlexPie
+		// setting the source of data/items in FlexChart
 		mChart.setItemsSource(ChartPoint.getList());
 
-		// setting the default values for header and footer in FlexPie
-		// properties set in XML layout
+		// setting the default values for header and footer in FlexChart
+		// properties if it is not set in XML layout
 		// mChart.setHeader("Sample Chart");
 		// mChart.setHeaderFontColor(Color.RED);
 		// mChart.setHeaderFontGravity(1);
@@ -47,6 +48,7 @@ public class LegendAndTitlesActivity extends Activity
 		// mChart.setFooterFontGravity(4);
 		// mChart.setFooterFontSize(10);
 		mChart.getAxisX().setTitle("Country");
+		mChart.getAxisX().setMajorGridVisible(true);
 		// mChart.getAxisX().setTitleFontTypeface(Typeface.defaultFromStyle(Typeface.ITALIC));
 		// mChart.getAxisY().setTitleFontTypeface(Typeface.defaultFromStyle(Typeface.ITALIC));
 		mChart.getAxisY().setTitle("Amount");

@@ -31,10 +31,10 @@ public class ConditionalFormattingActivity extends Activity
 		// add series to list
 		mChart.getSeries().add(seriesSine);
 
-		// setting the source of data/items in FlexPie
+		// setting the source of data/items in FlexChart
 		mChart.setItemsSource(getList());
 
-		// setting the default values in FlexPie
+		// setting the default values in FlexChart
 		// property set in XML layout
 		// mChart.setChartType(ChartType.LINESYMBOLS);
 		mChart.getAxisY().setMajorUnit(.20);

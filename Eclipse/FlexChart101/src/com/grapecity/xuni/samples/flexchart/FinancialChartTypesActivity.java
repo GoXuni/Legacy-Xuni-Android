@@ -23,6 +23,9 @@ public class FinancialChartTypesActivity extends Activity
 	private Spinner mFinancialTypeSpinner;
 	private FlexChart mChart;
 
+	private ObservableList<ChartPoint> dataSource;
+	private static final String DATA_SOURCE = "DATA_SOURCE";
+
 	@Override
 	protected void onCreate(Bundle savedInstanceState)
 	{
@@ -43,12 +46,21 @@ public class FinancialChartTypesActivity extends Activity
 		// add series to list
 		mChart.getSeries().add(series);
 
-		// setting the source of data/items and default values in FlexPie
+		// setting the source of data/items and default values in FlexChart
 		// properties set in XML layout
 		// mChart.getAxisX().setFormat("MM/dd/yyyy");
 		// mChart.setChartType(ChartType.CANDLE);
-		mChart.setItemsSource(getList());
+		if (dataSource == null && savedInstanceState != null)
+		{
+			dataSource = (ObservableList<ChartPoint>) savedInstanceState.getSerializable(DATA_SOURCE);
+		}
+		else
+		{
+			dataSource = getList();
+		}
+		mChart.setItemsSource(dataSource);
 		mChart.getAxisY().setMajorGridFill(Color.argb(20, 50, 50, 50));
+		mChart.getAxisX().setLabelAngle(90);
 
 		// create custom adapter for spinner and initialize with string array
 		ArrayAdapter<CharSequence> adapter1 = ArrayAdapter.createFromResource(this, R.array.financialTypeSpinnerValues, android.R.layout.simple_spinner_item);
@@ -115,5 +127,12 @@ public class FinancialChartTypesActivity extends Activity
 		}
 
 		return list;
+	}
+
+	@Override
+	protected void onSaveInstanceState(Bundle outState)
+	{
+		outState.putSerializable(DATA_SOURCE, dataSource);
+		super.onSaveInstanceState(outState);
 	}
 }

@@ -8,14 +8,16 @@ import android.widget.AdapterView.OnItemSelectedListener;
 import android.widget.ArrayAdapter;
 import android.widget.Spinner;
 
+import com.grapecity.xuni.core.ObservableList;
 import com.grapecity.xuni.flexchart.*;
 
 public class DataLabelsActivity extends Activity
 {
-
 	private FlexChart mChart;
 	private Spinner mDataLabelSpinner;
 
+	private ObservableList<ChartPoint> dataSource;
+	private static final String DATA_SOURCE = "DATA_SOURCE";
 	@Override
 	protected void onCreate(Bundle savedInstanceState)
 	{
@@ -32,23 +34,32 @@ public class DataLabelsActivity extends Activity
 		// initialize series elements and set the binding to variables of
 		// ChartPoint
 		ChartSeries seriesSales = new ChartSeries(mChart, "Sales", "sales");
-		ChartSeries seriesExpenses = new ChartSeries(mChart, "Expenses", "expenses");
-		ChartSeries seriesDownloads = new ChartSeries(mChart, "Downloads", "downloads");
 
 		// add series to list
 		mChart.getSeries().add(seriesSales);
-		mChart.getSeries().add(seriesExpenses);
-		mChart.getSeries().add(seriesDownloads);
 
-		// setting the source of data/items in FlexPie
-		mChart.setItemsSource(ChartPoint.getList());
-
+		// setting the source of data/items in FlexChart
+		if (dataSource == null && savedInstanceState != null)
+		{
+			dataSource = (ObservableList<ChartPoint>) savedInstanceState.getSerializable(DATA_SOURCE);
+		}
+		else
+		{
+			dataSource = ChartPoint.getList();
+		}
+		mChart.setItemsSource(dataSource);
+				
+		mChart.setChartType(ChartType.BAR);
+		
 		// create custom adapter for spinner and initialize with string array
 		ArrayAdapter<CharSequence> adapter1 = ArrayAdapter.createFromResource(this, R.array.dataLabelSpinnerValues, android.R.layout.simple_spinner_item);
 		// Specify the layout to use when the list of choices appears
 		adapter1.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
 		// Apply the adapter to the spinner
 		mDataLabelSpinner.setAdapter(adapter1);
+		
+		int defaultPosition = adapter1.getPosition("Left");
+		mDataLabelSpinner.setSelection(defaultPosition);
 		mDataLabelSpinner.setOnItemSelectedListener(new OnItemSelectedListener()
 		{
 
@@ -79,5 +90,12 @@ public class DataLabelsActivity extends Activity
 
 			}
 		});
+	}
+	
+	@Override
+	protected void onSaveInstanceState(Bundle outState)
+	{
+		outState.putSerializable(DATA_SOURCE, dataSource);
+		super.onSaveInstanceState(outState);
 	}
 }

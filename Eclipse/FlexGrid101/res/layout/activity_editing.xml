@@ -10,7 +10,7 @@
         android:id="@+id/flexgrid"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        app:selectionMode="ROW" >
+        app:flexGrid_selectionMode="ROW" >
     </com.grapecity.xuni.flexgrid.FlexGrid>
 
 </LinearLayout>

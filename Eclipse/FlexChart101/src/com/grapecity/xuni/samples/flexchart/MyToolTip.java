@@ -17,7 +17,7 @@ import com.grapecity.xuni.flexchart.*;
 /**
  * A class to represent a custom layout for custom tooltips
  *
- * @author vivek.punjabi
+ * @author GrapeCity
  */
 class MyToolTip extends BaseChartTooltipView
 {

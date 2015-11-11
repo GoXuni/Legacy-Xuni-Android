@@ -48,18 +48,30 @@ public class HitTestActivity extends Activity
 			listSinTuple.add(new PointF(i, (float) Math.sin(0.12 * i)));
 		}
 
-		seriesSine.setItemsSource(listCosTuple);
-		seriesCosine.setItemsSource(listSinTuple);
+		seriesSine.setItemsSource(listSinTuple);
+		seriesCosine.setItemsSource(listCosTuple);
 
 		// add series to list
-		mChart.getSeries().add(seriesSine);
 		mChart.getSeries().add(seriesCosine);
+		mChart.getSeries().add(seriesSine);
 
 		// properties set in XML layout
 		// mChart.setChartType(ChartType.LINESYMBOLS);
 
 		// handler to override the existing call() which is called before
 		// rendering each chart element and customize the required elements
+
+		// mChart.getOnTouchListeners().add(new BaseOnFlexChartTouchListener(mChart){
+		//
+		// @Override
+		// public void onTouch(MotionEvent event, FlexChartHitTestInfo info)
+		// {
+		// // TODO Auto-generated method stub
+		//
+		// }
+		//
+		// });
+
 		mChart.getTapped().addHandler(new IEventHandler()
 		{
 			@Override

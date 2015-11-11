@@ -64,7 +64,7 @@ public class SnapshotActivity extends Activity
 		mChart.getSeries().add(seriesExpenses);
 		mChart.getSeries().add(seriesDownloads);
 
-		// setting the source of data/items in FlexPie
+		// setting the source of data/items in FlexChart
 		mChart.setItemsSource(ChartPoint.getList());
 
 		// export image when the chart is fully rendered

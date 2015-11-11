@@ -36,7 +36,7 @@ public class ZoomingAndScrollingActivity extends Activity
 		// add series to list
 		mChart.getSeries().add(seriesSales);
 
-		// setting the source of data/items and default values in FlexPie
+		// setting the source of data/items and default values in FlexChart
 		mChart.setItemsSource(DefaultChartPoint.getList());
 		// property set in XML layout
 		// mChart.setChartType(ChartType.AREA);

@@ -9,7 +9,7 @@
         android:id="@+id/flexgrid"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        app:showGroups="true" >
+        app:flexGrid_showGroups="true" >
     </com.grapecity.xuni.flexgrid.FlexGrid>
 
 </LinearLayout>

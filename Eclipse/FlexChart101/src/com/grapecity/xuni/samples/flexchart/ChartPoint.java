@@ -3,19 +3,21 @@
  */
 package com.grapecity.xuni.samples.flexchart;
 
-import java.text.ParseException;
+import java.io.Serializable;
 import java.util.Date;
 import java.util.Random;
 
-import com.grapecity.xuni.core.*;
+import com.grapecity.xuni.core.ObservableList;
 
 /**
  * A class that encapsulates and manipulates series data
- *
- * @author vivek.punjabi
+ * 
+ * @author GrapeCity
  */
-public class ChartPoint
+public class ChartPoint implements Serializable
 {
+	private static final long serialVersionUID = 1L;
+	
 	protected String name;
 	protected Date date;
 	protected int sales;
@@ -216,4 +218,23 @@ public class ChartPoint
 		return list;
 	}
 
+	/**
+	 * a method to create a list of random objects of type ChartPoint with a fixed element size;
+	 * 
+	 * @param size
+	 *            - size of element of series.
+	 * */
+	public static ObservableList<ChartPoint> getList(int size)
+	{
+		ObservableList<ChartPoint> list = new ObservableList<ChartPoint>();
+
+		Random random = new Random();
+
+		for (int i = 0; i < size; i++)
+		{
+
+			list.add(new ChartPoint(i + "", random.nextInt(20000), random.nextInt(20000), random.nextInt(20000)));
+		}
+		return list;
+	}
 }

@@ -31,7 +31,7 @@
         <activity android:name=".SnapshotActivity" android:label="@string/snapshot"></activity>
         <activity android:name=".UpdateAnimationActivity" android:label="@string/update_animation"></activity>
         <activity android:name=".DataLabelsActivity" android:label="@string/data_labels"></activity>
-        <activity android:name=".CustomTooltipActivity" android:label="@string/data_labels"></activity>
+        <activity android:name=".CustomTooltipActivity" android:label="@string/custom_tooltip"></activity>
     </application>
 
 </manifest>

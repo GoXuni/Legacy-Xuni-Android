@@ -3,207 +3,203 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent" >
 
-    <LinearLayout
+    <TableLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        tools:context="${relativePackage}.${activityClass}" >
+        android:layout_height="wrap_content" >
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_weight="8"
-            android:orientation="horizontal" >
+        <TableRow
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" >
 
-            <LinearLayout
+            <TextView
+                android:id="@+id/firstNameTextView"
                 android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:orientation="vertical" >
-
-                <TextView
-                    android:id="@+id/nameText"
-                    android:layout_width="match_parent"
-                    android:layout_height="0dp"
-                    android:layout_weight="1"
-                    android:gravity="center"
-                    android:text="@string/name" >
-                </TextView>
-
-                <TextView
-                    android:id="@+id/countryText"
-                    android:layout_width="match_parent"
-                    android:layout_height="0dp"
-                    android:layout_weight="1"
-                    android:gravity="center"
-                    android:text="@string/country" >
-                </TextView>
-
-                <TextView
-                    android:id="@+id/firstText"
-                    android:layout_width="match_parent"
-                    android:layout_height="0dp"
-                    android:layout_weight="1"
-                    android:gravity="center"
-                    android:text="@string/first" >
-                </TextView>
-
-                <TextView
-                    android:id="@+id/lastText"
-                    android:layout_width="match_parent"
-                    android:layout_height="0dp"
-                    android:layout_weight="1"
-                    android:gravity="center"
-                    android:text="@string/last" >
-                </TextView>
-
-                <TextView
-                    android:id="@+id/fatherText"
-                    android:layout_width="match_parent"
-                    android:layout_height="0dp"
-                    android:layout_weight="1"
-                    android:gravity="center"
-                    android:text="@string/father" >
-                </TextView>
-
-                <TextView
-                    android:id="@+id/brotherText"
-                    android:layout_width="match_parent"
-                    android:layout_height="0dp"
-                    android:layout_weight="1"
-                    android:gravity="center"
-                    android:text="@string/brother" >
-                </TextView>
-
-                <TextView
-                    android:id="@+id/cousinText"
-                    android:layout_width="match_parent"
-                    android:layout_height="0dp"
-                    android:layout_weight="1"
-                    android:gravity="center"
-                    android:text="@string/cousin" >
-                </TextView>
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
+                android:layout_height="wrap_content"
                 android:layout_weight="2"
-                android:orientation="vertical" >
+                android:gravity="center"
+                android:text="@string/first"
+                android:textAppearance="@android:style/TextAppearance.DeviceDefault.Medium" >
+            </TextView>
 
-                <Spinner
-                    android:id="@+id/nameSpinner"
-                    android:layout_width="match_parent"
-                    android:layout_height="0dp"
-                    android:layout_weight="1" />
-
-                <Spinner
-                    android:id="@+id/countrySpinner"
-                    android:layout_width="match_parent"
-                    android:layout_height="0dp"
-                    android:layout_weight="1" />
-
-                <Spinner
-                    android:id="@+id/firstSpinner"
-                    android:layout_width="match_parent"
-                    android:layout_height="0dp"
-                    android:layout_weight="1" />
-
-                <Spinner
-                    android:id="@+id/lastSpinner"
-                    android:layout_width="match_parent"
-                    android:layout_height="0dp"
-                    android:layout_weight="1" />
-
-                <Spinner
-                    android:id="@+id/fatherSpinner"
-                    android:layout_width="match_parent"
-                    android:layout_height="0dp"
-                    android:layout_weight="1" />
-
-                <Spinner
-                    android:id="@+id/brotherSpinner"
-                    android:layout_width="match_parent"
-                    android:layout_height="0dp"
-                    android:layout_weight="1" />
-
-                <Spinner
-                    android:id="@+id/cousinSpinner"
-                    android:layout_width="match_parent"
-                    android:layout_height="0dp"
-                    android:layout_weight="1" />
-            </LinearLayout>
-
-            <LinearLayout
+            <Spinner
+                android:id="@+id/firstNameSpinner"
                 android:layout_width="0dp"
-                android:layout_height="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="4" />
+
+            <EditText
+                android:id="@+id/firstNameEditText"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="4"
+                android:inputType="text" >
+            </EditText>
+        </TableRow>
+
+        <TableRow
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" >
+
+            <TextView
+                android:id="@+id/lastNameTextView"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
                 android:layout_weight="2"
-                android:orientation="vertical" >
+                android:gravity="center"
+                android:text="@string/last"
+                android:textAppearance="@android:style/TextAppearance.DeviceDefault.Medium" >
+            </TextView>
 
-                <EditText
-                    android:id="@+id/nameValue"
-                    android:layout_width="match_parent"
-                    android:layout_height="0dp"
-                    android:layout_weight="1"
-                    android:inputType="textPersonName" >
-                </EditText>
+            <Spinner
+                android:id="@+id/lastNameSpinner"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="4" />
 
-                <EditText
-                    android:id="@+id/countryValue"
-                    android:layout_width="match_parent"
-                    android:layout_height="0dp"
-                    android:layout_weight="1"
-                    android:inputType="text" >
-                </EditText>
+            <EditText
+                android:id="@+id/lastNameEditText"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="4"
+                android:inputType="text" >
+            </EditText>
+        </TableRow>
 
-                <EditText
-                    android:id="@+id/firstValue"
-                    android:layout_width="match_parent"
-                    android:layout_height="0dp"
-                    android:layout_weight="1"
-                    android:inputType="textPersonName" >
-                </EditText>
+        <TableRow
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" >
 
-                <EditText
-                    android:id="@+id/lastValue"
-                    android:layout_width="match_parent"
-                    android:layout_height="0dp"
-                    android:layout_weight="1"
-                    android:inputType="textPersonName" >
-                </EditText>
+            <TextView
+                android:id="@+id/addressTextView"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:gravity="center"
+                android:text="@string/address"
+                android:textAppearance="@android:style/TextAppearance.DeviceDefault.Medium" >
+            </TextView>
 
-                <EditText
-                    android:id="@+id/fatherValue"
-                    android:layout_width="match_parent"
-                    android:layout_height="0dp"
-                    android:layout_weight="1"
-                    android:inputType="textPersonName" >
-                </EditText>
+            <Spinner
+                android:id="@+id/addressSpinner"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="4" />
 
-                <EditText
-                    android:id="@+id/brotherValue"
-                    android:layout_width="match_parent"
-                    android:layout_height="0dp"
-                    android:layout_weight="1"
-                    android:inputType="textPersonName" >
-                </EditText>
+            <EditText
+                android:id="@+id/addressEditText"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="4"
+                android:inputType="text" >
+            </EditText>
+        </TableRow>
 
-                <EditText
-                    android:id="@+id/cousinValue"
-                    android:layout_width="match_parent"
-                    android:layout_height="0dp"
-                    android:layout_weight="1"
-                    android:inputType="textPersonName" >
-                </EditText>
-            </LinearLayout>
-        </LinearLayout>
+        <TableRow
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" >
 
-        <Button
-            android:id="@+id/buttonFilter"
-            android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_weight="1"
-            android:text="@string/filter" />
-    </LinearLayout>
+            <TextView
+                android:id="@+id/cityTextView"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:gravity="center"
+                android:text="@string/city"
+                android:textAppearance="@android:style/TextAppearance.DeviceDefault.Medium" >
+            </TextView>
+
+            <Spinner
+                android:id="@+id/citySpinner"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="4" />
+
+            <EditText
+                android:id="@+id/cityEditText"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="4"
+                android:inputType="text" >
+            </EditText>
+        </TableRow>
+
+        <TableRow
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" >
+
+            <TextView
+                android:id="@+id/postalCodeView"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:gravity="center"
+                android:text="@string/postalCode"
+                android:textAppearance="@android:style/TextAppearance.DeviceDefault.Medium" >
+            </TextView>
+
+            <Spinner
+                android:id="@+id/postalCodeSpinner"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="4" />
+
+            <EditText
+                android:id="@+id/postalCodeEditText"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="4"
+                android:inputType="number" >
+            </EditText>
+        </TableRow>
+
+        <TableRow
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" >
+
+            <TextView
+                android:id="@+id/emailView"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:gravity="center"
+                android:text="@string/email"
+                android:textAppearance="@android:style/TextAppearance.DeviceDefault.Medium" >
+            </TextView>
+
+            <Spinner
+                android:id="@+id/emailSpinner"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="4" />
+
+            <EditText
+                android:id="@+id/emailEditText"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="4"
+                android:inputType="textEmailAddress" >
+            </EditText>
+        </TableRow>
+        
+         <TableRow
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp" >
+
+            <Button
+                android:id="@+id/filterButton"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="5"
+                android:text="@string/filter" />
+
+            <Button
+                android:id="@+id/cancelButton"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="5"
+                android:text="@string/cancel" />
+        </TableRow>
+    </TableLayout>
 
 </ScrollView>

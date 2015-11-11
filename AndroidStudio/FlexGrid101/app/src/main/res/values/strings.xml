@@ -2,7 +2,6 @@
 <resources>
 
     <string name="app_name">FlexGrid101</string>
-    <string name="hello_world">Hello world!</string>
     <string name="gettingStarted">Getting Started</string>
     <string name="columnDefinitions">Column Definitions</string>
     <string name="selectionModes">Selection Modes</string>
@@ -14,6 +13,9 @@
     <string name="fullFilter">Full-Text Filter</string>
     <string name="columnLayout">Column Layout</string>
     <string name="conditionalFormatting">Conditional Formatting</string>
+    <string name="starSizing">Star Sizing</string>
+    <string name="cellFreezing">Cell Freezing</string>
+    <string name="onDemand">On Demand</string>
     <string name="gettingStartedDesc">Display, edit and aggregate your data all at once with FlexGrid</string>
     <string name="columnDefinitionsDesc">Shows how to specify and format columns</string>
     <string name="selectionModesDesc">Shows the various cell selection modes</string>
@@ -25,6 +27,9 @@
     <string name="fullFilterDesc">Filters and highlights the data across all columns</string>
     <string name="columnLayoutDesc">Shows the column manager to modify the column layout</string>
     <string name="conditionalFormattingDesc">Uses a CellFactory to apply conditional formatting</string>
+    <string name="starSizingDesc">Shows a responsive column layout that uses star sizing</string>
+    <string name="cellFreezingDesc">Shows column and row freezing</string>
+    <string name="onDemandDesc">Load items on demand as the user scrolls down the grid</string>
     <string name="editRow">Edit Row</string>
     <string name="editColumns">Edit Columns</string>
     <string name="id">ID</string>
@@ -32,23 +37,26 @@
     <string name="cancel">Cancel</string>
     <string name="apply">Apply</string>
     <string name="name">Name</string>
+    <string name="address">Address</string>
+    <string name="city">City</string>
     <string name="country">Country</string>
+    <string name="postalCode">Postal Code</string>
+    <string name="email">Email</string>
     <string name="active">Active</string>
-    <string name="first">First</string>
-    <string name="last">Last</string>
-    <string name="hired">Hired</string>
-    <string name="weight">Weight</string>
-    <string name="father">Father</string>
-    <string name="brother">Brother</string>
-    <string name="cousin">Cousin</string>
+    <string name="first">First Name</string>
+    <string name="last">Last Name</string>
     <string name="actionFilter">Filter</string>
     <string name="actionFilterRemove">Remove Filter</string>
     <string name="actionEditRow">Edit Row</string>
     <string name="confirmEditTitle">Confirm Edit</string>
+    <string name="confirmEditDesc">Do you want to commit the edit?</string>
     <string name="minus">-</string>
     <string name="plus">+</string>
     <string name="moveDown">&#x2193;</string>
     <string name="moveUp">&#x2191;</string>
+    <string name="editRowToast">Select a row to edit</string>
+    <string name="noInternet">No internet connection available.</string>
+    <string name="android">android development</string>
 
     <string-array name="selectionModeSpinnerValues">
         <item>RowRange</item>
@@ -63,5 +71,11 @@
         <item>StartsWith</item>
         <item>EndsWith</item>
     </string-array>
-
+<string-array name="youtubeOrderByValues">
+        <item>relevance</item>
+        <item>date</item>
+        <item>viewCount</item>
+        <item>rating</item>
+        <item>title</item>
+    </string-array>
 </resources>

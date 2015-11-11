@@ -33,7 +33,7 @@ public class MixedChartTypesActivity extends Activity
 		mChart.getSeries().add(seriesExpenses);
 		mChart.getSeries().add(seriesDownloads);
 
-		// setting the source of data/items and default values in FlexPie
+		// setting the source of data/items and default values in FlexChart
 		mChart.setItemsSource(ChartPoint.getList());
 		seriesDownloads.setChartType(ChartType.LINE);
 	}

@@ -6,6 +6,7 @@ import java.util.Random;
 import android.app.Activity;
 import android.os.Bundle;
 
+import com.grapecity.xuni.chartcore.Palettes;
 import com.grapecity.xuni.core.*;
 import com.grapecity.xuni.flexchart.*;
 
@@ -29,6 +30,9 @@ public class DynamicChartsActivity extends Activity
 
 		// set the binding for X-axis of FlexChart
 		mChart.setBindingX("name");
+		
+		// set palette of chart.
+		mChart.setPalette(Palettes.CORAL);
 
 		// initialize series elements and set the binding to variables of
 		// ChartPoint
@@ -41,7 +45,7 @@ public class DynamicChartsActivity extends Activity
 		mChart.getSeries().add(seriesExpenses);
 		mChart.getSeries().add(seriesDownloads);
 
-		// setting the source of data/items and default values in FlexPie
+		// setting the source of data/items and default values in FlexChart
 		// property set in XML layout
 		// mChart.setChartType(ChartType.LINE);
 		getList();
