@@ -26,6 +26,7 @@ import com.grapecity.xuni.samples.flexgrid.data.Customer;
 public class DateEditorCellFactory extends GridCellFactory
 {
 	DatePickerDialog mDatePicker;
+	Customer currentEditCustomer;
 
 	public DateEditorCellFactory(FlexGrid flexGrid)
 	{
@@ -40,6 +41,8 @@ public class DateEditorCellFactory extends GridCellFactory
 		if ("lastOrderDate".equals(column.getName()))
 		{
 			Customer customer = (Customer) gridPanel.getRows().get(cellRange.row).getDataItem();
+			
+			currentEditCustomer = customer;
 
 			Calendar lastOrderDate = customer.getLastOrderDate();
 
@@ -64,6 +67,8 @@ public class DateEditorCellFactory extends GridCellFactory
 
 			Customer customer = cv.currentEditItem();
 
+			if(customer == null) customer = currentEditCustomer;
+			
 			Calendar cal = customer.getLastOrderDate();
 
 			cal.set(Calendar.YEAR, year);

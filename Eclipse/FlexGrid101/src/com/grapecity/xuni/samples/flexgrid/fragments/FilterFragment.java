@@ -57,7 +57,7 @@ public class FilterFragment extends DialogFragment
 
 		View rootView = inflater.inflate(R.layout.fragment_filter, container, false);
 
-		getDialog().setTitle("Select Filter");
+		getDialog().setTitle(R.string.selectFilterTitle);
 
 		// creating filter variables to hold all the filters
 		mFilter = new FilterSelection[6];

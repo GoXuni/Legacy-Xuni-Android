@@ -82,7 +82,13 @@
     <string name="dragContent">DragContent</string>
     <string name="markerAlignment">Alignment</string>
     <string name="scrollingAndPinchOperate">Drag to scroll/Pinch to zoom</string>
-    
+    <string name="snapshotStored">Snapshot stored to device</string>
+	<string name="hitTestChartElement">Chart Element：</string>
+  	<string name="hitTestChartElementNone">NONE</string>
+  	<string name="hitTestPointIndex">Point Index：</string>
+  	<string name="hitTestSeriesName">Series Name:</string>
+  	<string name="annotation">Annotation</string>
+  	<string name="annotationDesc">Shows a chart with different kinds of annotations</string>
 
     <string-array name="chartTypeSpinnerValues">
         <item>Area</item>
@@ -149,5 +155,9 @@
         <item>Left</item>
         <item>Bottom</item>
     </string-array>
-
+	<string-array name="lineMarkerInteraction">
+	    <item>Move</item>
+	    <item>Drag</item>
+	    <item>None</item>
+    </string-array>
 </resources>

@@ -70,7 +70,9 @@ public class SampleListAdapter extends BaseAdapter
 				R.string.customMarkerDesc), R.drawable.chart_marker, CustomMarkerActivity.class);
 		SampleModel customizingAxesLabelActivity = new SampleModel(context.getResources().getString(R.string.customizingAxesLabel), context.getResources()
 				.getString(R.string.customizingAxesLabelDesc), R.drawable.chart_axes, CustomizingAxesLabelActivity.class);
-
+		SampleModel annotation = new SampleModel(context.getResources().getString(R.string.annotation), context.getResources().getString(
+				R.string.annotationDesc), R.drawable.chart_annotation, AnnotationActivity.class);
+		
 		// adding objects to list
 		list.add(gettingStarted);
 		list.add(basicChartTypes);
@@ -79,6 +81,7 @@ public class SampleListAdapter extends BaseAdapter
 		list.add(bubbleChart);
 		list.add(customTooltips);
 		list.add(dataLabels);
+		list.add(annotation);
 		list.add(customMarkerActivity);
 		list.add(customizingAxesLabelActivity);
 		list.add(multipleAxes);

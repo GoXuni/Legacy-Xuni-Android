@@ -27,6 +27,7 @@ import com.grapecity.xuni.samples.flexgrid.data.Customer;
 public class TimeEditorCellFactory extends GridCellFactory
 {
 	TimePickerDialog mTimePicker;
+	Customer currentEditCustomer;
 
 	public TimeEditorCellFactory(FlexGrid flexGrid)
 	{
@@ -42,6 +43,8 @@ public class TimeEditorCellFactory extends GridCellFactory
 		{
 			Customer customer = (Customer) gridPanel.getRows().get(cellRange.row).getDataItem();
 
+			currentEditCustomer = customer;
+			
 			Calendar lastOrderDate = customer.getLastOrderDate();
 
 			mTimePicker = new TimePickerDialog(flexGrid.getContext(), onTimeSetListener, lastOrderDate.get(Calendar.HOUR_OF_DAY),
@@ -65,6 +68,8 @@ public class TimeEditorCellFactory extends GridCellFactory
 
 			Customer customer = cv.currentEditItem();
 
+			if(customer == null) customer = currentEditCustomer;
+			
 			Calendar cal = customer.getLastOrderDate();
 
 			cal.set(Calendar.HOUR_OF_DAY, hourOfDay);

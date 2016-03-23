@@ -57,11 +57,16 @@ public class ConditionalFormattingActivity extends Activity
 					int r = y >= 0 ? 255 : (int) (255 * (1 + y));
 					int b = y < 0 ? 255 : (int) (255 * (1 - y));
 					int g = (int) ((1 - Math.abs(y)) * 255);
-					args.renderEngine.setFill(Color.argb(255, r, g, b));
+					// DefaultRender.Execute(fillColor, borderColor, borderWidth, opacity,
+					// symbolBorderColor, symbolBorderWidth);
+					args.defaultRender.execute(Color.argb(255, r, g, b), null, null, null, null, null);
+				}
+				else
+				{
+					// default function to render char elements
+					args.defaultRender.execute();
 				}
 
-				// default function to render char elements
-				args.defaultRender.execute();
 			}
 		}, this);
 

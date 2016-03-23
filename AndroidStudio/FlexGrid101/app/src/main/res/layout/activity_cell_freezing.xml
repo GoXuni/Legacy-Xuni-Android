@@ -9,7 +9,6 @@
         android:id="@+id/flexgrid"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        app:flexGrid_frozenColumns="2"
         app:flexGrid_frozenRows="2" >
     </com.grapecity.xuni.flexgrid.FlexGrid>
 

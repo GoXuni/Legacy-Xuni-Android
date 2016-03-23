@@ -52,7 +52,7 @@ public class CustomMarkerActivity extends Activity
 		// add series to list
 		mChart.getSeries().add(series_sales);
 		mChart.getSeries().add(series_expenses);
-
+		
 		if (dataSource == null && savedInstanceState != null)
 		{
 			dataSource = (ObservableList<ChartPoint>) savedInstanceState.getSerializable(DATA_SOURCE);
@@ -63,8 +63,8 @@ public class CustomMarkerActivity extends Activity
 		}
 		mChart.setItemsSource(dataSource);
 
-		ArrayAdapter<String> adapterInteractive = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item, new String[]
-		{ "Move", "Drag", "None" });
+		ArrayAdapter<CharSequence> adapterInteractive = ArrayAdapter.createFromResource(this, R.array.lineMarkerInteraction, android.R.layout.simple_spinner_item);
+		
 		adapterInteractive.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
 		mInteractiveSpinner.setAdapter(adapterInteractive);
 		mInteractiveSpinner.setOnItemSelectedListener(new OnItemSelectedListener()
@@ -119,6 +119,7 @@ public class CustomMarkerActivity extends Activity
 		mChart.getMarker().setLines(ChartMarkerLines.VERTICAL);
 		mChart.getMarker().setAlignment(ChartMarkerAlignment.Auto);
 		mChart.getMarker().setContent(new MyMarker(mChart, getApplicationContext(), mChart.getMarker()));
+		mChart.getMarker().setSeriesIndex(0);
 	}
 	
 	@Override

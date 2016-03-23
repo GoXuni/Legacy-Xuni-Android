@@ -45,7 +45,19 @@ public class ColumnDefinitionsActivity extends Activity
 		countryColumn.setShowDropDown(true);
 
 		GridColumn lastOrderDateColumn = new GridColumn(mGrid, "Last Order Time", "lastOrderDate");
-		lastOrderDateColumn.setFormat("hh:mm a");
+		
+		//use a different time format for Japanese
+		if(getResources().getBoolean(R.bool.isJapanese))
+		{
+			lastOrderDateColumn.setFormat("k:mm");
+		}
+		else
+		{
+			lastOrderDateColumn.setFormat("hh:mm a");	
+		}
+			
+		
+		
 
 		GridColumn activeColumn = new GridColumn(mGrid, "Active", "active");
 		activeColumn.setDataType(DataType.BOOLEAN);

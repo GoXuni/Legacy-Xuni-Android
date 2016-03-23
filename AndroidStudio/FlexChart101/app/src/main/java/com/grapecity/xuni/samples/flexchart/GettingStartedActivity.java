@@ -39,8 +39,5 @@ public class GettingStartedActivity extends Activity
 
 		// setting the source of data/items in FlexChart
 		mChart.setItemsSource(ChartPoint.getList());
-
-		// mChart.getAxisX().setOrigin(Float.valueOf((float) 4.0));
-		// mChart.getAxisY().setOrigin(Float.valueOf((float) -20000.0));
 	}
 }

@@ -115,7 +115,7 @@ public class SnapshotActivity extends Activity
 			mediaScanIntent.setData(contentUri);
 			getApplicationContext().sendBroadcast(mediaScanIntent);
 
-			Toast.makeText(getApplicationContext(), "Snapshot stored to device", Toast.LENGTH_SHORT).show();
+			Toast.makeText(getApplicationContext(), R.string.snapshotStored, Toast.LENGTH_SHORT).show();
 			return true;
 
 		}

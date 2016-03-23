@@ -1,0 +1,17 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical"
+    android:paddingBottom="20dp"
+    android:paddingLeft="20dp"
+    android:paddingRight="20dp"
+    android:paddingTop="20dp" >
+
+    <com.grapecity.xuni.calendar.XuniCalendar
+        android:id="@+id/calendar1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+    </com.grapecity.xuni.calendar.XuniCalendar>
+
+</LinearLayout>

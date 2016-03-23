@@ -42,6 +42,9 @@ public class OnDemandActivity extends Activity
 
 	private YoutubeCollectionView mCollectionView;
 
+	private String[] youtobeOrderByValuesArray = new String[]
+	{ "relevance", "date", "viewCount", "rating", "title" };
+
 	@Override
 	protected void onCreate(Bundle savedInstanceState)
 	{
@@ -87,7 +90,7 @@ public class OnDemandActivity extends Activity
 			{
 				if (mCollectionView != null)
 				{
-					mCollectionView.setOrderBy(mYoutubeOrderBySpinner.getSelectedItem().toString());
+					mCollectionView.setOrderBy(youtobeOrderByValuesArray[mYoutubeOrderBySpinner.getSelectedItemPosition()]);
 				}
 			}
 

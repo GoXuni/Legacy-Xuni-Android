@@ -6,6 +6,7 @@ import android.os.Bundle;
 
 import com.grapecity.xuni.flexgrid.FlexGrid;
 import com.grapecity.xuni.flexgrid.FlexGridCanvasRenderEngine;
+import com.grapecity.xuni.flexgrid.GridAllowMerging;
 import com.grapecity.xuni.flexgrid.GridCellRange;
 import com.grapecity.xuni.flexgrid.GridColumn;
 import com.grapecity.xuni.flexgrid.GridDataMap;
@@ -28,8 +29,11 @@ public class CellFreezingActivity extends Activity
 
 		mGrid = (FlexGrid) findViewById(R.id.flexgrid);
 		
+		boolean isTablet = getResources().getBoolean(R.bool.isTablet);
+		
+		mGrid.setFrozenColumns(isTablet ? 2 : 1);
+		
 		//set in xml layout
-		//mGrid.setFrozenColumns(2);
 		//mGrid.setFrozenRows(2);
 		
 		mGrid.setItemsSource(Customer.getList(100));
@@ -45,6 +49,8 @@ public class CellFreezingActivity extends Activity
 		countryColumn.setName("country");
 		countryColumn.setDataMap(new GridDataMap(Customer.getCounties(), "countryId", "countryName"));
 		countryColumn.setShowDropDown(true);
+		countryColumn.setAllowMerging(true);
+		mGrid.setAllowMerging(GridAllowMerging.CELLS);
 		
 		//replace first/last name with name column
 		GridColumn nameColumn = new GridColumn(mGrid, "name", "firstName");

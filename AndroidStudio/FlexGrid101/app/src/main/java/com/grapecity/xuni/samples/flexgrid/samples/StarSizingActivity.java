@@ -31,6 +31,7 @@ public class StarSizingActivity extends Activity
 		
 		GridColumn lastNameColumn = new GridColumn(mGrid, "Last Name", "lastName");
 		lastNameColumn.setWidth("*");
+		
 
 		GridColumn lastOrderDateColumn = new GridColumn(mGrid, "Last Order Time", "lastOrderDate");
 		lastOrderDateColumn.setFormat("hh:mm a");

@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">FlexGrid101</string>
+    <string name="gettingStarted">FlexGrid の基本機能</string>
+    <string name="columnDefinitions">列の定義</string>
+    <string name="selectionModes">選択モード</string>
+    <string name="editing">編集フォーム</string>
+    <string name="editConfirm">編集の確認</string>
+    <string name="customCells">カスタムセル</string>
+    <string name="grouping">グループ化</string>
+    <string name="rowDetails">Row Details</string>
+    <string name="filter">フィルタ</string>
+    <string name="fullFilter">全テキストフィルタ</string>
+    <string name="columnLayout">列レイアウト管理</string>
+  <string name="conditionalFormatting">条件付き書式（CellFactory 機能）</string>
+  <string name="starSizing">スターサイズ指定</string>
+    <string name="cellFreezing">セルの固定</string>
+    <string name="customMerging">Custom Merging</string>
+    <string name="onDemand">データオンデマンド</string>
+    <string name="gettingStartedDesc">FlexGrid でデータを表示、編集、集計</string>
+    <string name="columnDefinitionsDesc">列を指定して書式設定する方法</string>
+    <string name="selectionModesDesc">各種セル選択モードを表示</string>
+    <string name="editingDesc">入力フォームでセル内容を編集</string>
+    <string name="editConfirmDesc">セルの内容を変更する前にダイアログを表示</string>
+    <string name="customCellsDesc">数値をゲージで表示するセル</string>
+    <string name="groupingDesc">コレクションをグループ化して集計</string>
+    <string name="rowDetailsDesc">Expand and collapse row details.</string>
+    <string name="filterDesc">列のフィルタ条件をフォームで指定</string>
+  <string name="fullFilterDesc">すべてのデータを対象にフィルタ抽出して強調表示</string>
+    <string name="columnLayoutDesc">列マネージャを利用してレイアウトを変更</string>
+  <string name="conditionalFormattingDesc">特定の列に条件付き書式を設定</string>
+    <string name="starSizingDesc">配分で列幅を設定するレスポンシブなレイアウト</string>
+    <string name="cellFreezingDesc">行と列の固定</string>
+    <string name="customMergingDesc">Shows a grid with custom cell merging.</string>
+    <string name="onDemandDesc">スクロールの終端で表示データをロード</string>
+  <string name="editRow">行の内容を編集</string>
+    <string name="editColumns">列の編集</string>
+    <string name="id">ID</string>
+    <string name="save">保存</string>
+    <string name="cancel">キャンセル</string>
+    <string name="apply">適用</string>
+  <string name="name">氏名</string>
+  <string name="address">住所</string>
+  <string name="city">都市</string>
+  <string name="country">国</string>
+  <string name="postalCode">郵便コード</string>
+  <string name="email">メール</string>
+  <string name="active">有効</string>
+  <string name="first">名</string>
+  <string name="last">姓</string>
+  <string name="actionFilter">フィルタ</string>
+  <string name="actionFilterRemove">フィルタを削除</string>
+  <string name="actionEditRow">行内容の編集</string>
+  <string name="confirmEditTitle">編集の確認</string>
+  <string name="confirmEditDesc">編集した内容を確定しますか？</string>
+    <string name="minus">-</string>
+    <string name="plus">+</string>
+    <string name="moveDown">&#x2193;</string>
+    <string name="moveUp">&#x2191;</string>
+  <string name="editRowToast">編集する行を選択</string>
+  <string name="noInternet">インターネット接続がありません</string>
+  <string name="android">Android アプリ開発</string>
+  <string name="selectFilterTitle">フィルタの設定</string>
+
+        
+    <string name="monday">Monday</string>
+    <string name="tuesday">Tuesday</string>
+    <string name="wednesday">Wednesday</string>
+    <string name="thursday">Thursday</string>
+    <string name="friday">Friday</string>
+    <string name="saturday">Saturday</string>
+    <string name="sunday">Sunday</string>
+    
+       <string-array name="detailVisibilityModeSpinnerValues">
+        <item>ExpandSingle</item>
+        <item>ExpandMultiple</item>
+        <item>Selection</item>
+    </string-array>
+    <string-array name="selectionModeSpinnerValues">
+    <item>行範囲(RowRange)</item>
+    <item>行(Row)</item>
+    <item>セル範囲(CellRange)</item>
+    <item>セル(Cell)</item>
+    <item>設定なし(None)</item>
+    </string-array>
+    <string-array name="filterSpinnerValues">
+    <item>値を含む</item>
+    <item>値に等しい</item>
+    <item>値で始まる</item>
+    <item>値で終わる</item>
+    </string-array>
+<string-array name="youtubeOrderByValues">
+    <item>関連性</item>
+    <item>日付</item>
+    <item>閲覧数</item>
+    <item>評価</item>
+    <item>タイトル</item>
+    </string-array>
+</resources>

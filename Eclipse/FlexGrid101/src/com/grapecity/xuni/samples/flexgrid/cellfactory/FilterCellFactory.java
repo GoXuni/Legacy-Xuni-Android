@@ -94,7 +94,7 @@ public class FilterCellFactory extends GridCellFactory
 	{
 		if ("id".equals(propertyName))
 		{
-			return String.valueOf(customer.isActive());
+			return String.valueOf(customer.getId());
 		}
 		else if ("active".equals(propertyName))
 		{
@@ -110,7 +110,7 @@ public class FilterCellFactory extends GridCellFactory
 		}
 		else if ("countryId".equals(propertyName))
 		{
-			return "" + customer.getCountryId();
+			return Customer.getCounties().get(customer.getCountryId()).getCountryName();
 		}
 		else if ("email".equals(propertyName))
 		{

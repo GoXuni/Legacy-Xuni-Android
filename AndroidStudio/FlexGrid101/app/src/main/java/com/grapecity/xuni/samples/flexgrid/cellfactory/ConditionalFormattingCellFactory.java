@@ -30,7 +30,7 @@ public class ConditionalFormattingCellFactory extends GridCellFactory
 	public void createCellContent(GridPanel gridPanel, FlexGridCanvasRenderEngine renderEngine, GridCellRange cellRange, Rect bounds)
 	{
 		// condition to only perform custom formatting on cells under the column orderCount
-		if (gridPanel.getCellType() == GridCellType.CELL && gridPanel.getColumns().get(cellRange.col).getName().equals("orderCount"))
+		if (gridPanel.getCellType() == GridCellType.CELL && gridPanel.getColumns().get(cellRange.col).getBinding().equals("orderCount"))
 		{
 			// getting data object
 			mCustomer = (Customer) gridPanel.getRows().get(cellRange.row).getDataItem();

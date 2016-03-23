@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.grapecity.xuni.samples.calendar"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk
+        android:minSdkVersion="14"
+        android:targetSdkVersion="22" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/icon"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+        <activity
+            android:name=".MainActivity"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name="GettingStartedActivity" android:label="@string/getting_started"></activity>
+        <activity android:name="VerticalOrientationActivity" android:label="@string/vertical_orientation"></activity>
+        <activity android:name="CustomDayContentActivity" android:label="@string/custom_day_content"></activity>
+        <activity android:name="CustomHeaderActivity" android:label="@string/custom_header"></activity>
+        <activity android:name="CustomAppearanceActivity" android:label="@string/custom_appearance"></activity>
+        <activity android:name="PopupEditorActivity" android:label="@string/popup_editor"></activity>
+        <activity android:name="CustomSelectionActivity" android:label="@string/custom_selection"></activity>
+    </application>
+
+</manifest>

@@ -37,6 +37,7 @@
     <string name="animated">IsAnimated?</string>
     <string name="animation_mode">Load Animation Mode</string>
     <string name="actionSnapshot">Take Snapshot</string>
+    <string name="snapshotStored">Snapshot stored to device</string>
     <string name="button2015">2015</string>
     <string name="button2014">2014</string>
     <string name="button2013">2013</string>

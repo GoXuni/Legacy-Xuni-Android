@@ -20,6 +20,11 @@ public class HitTestActivity extends Activity
 	private FlexChart mChart;
 	private TextView mHitTestInfo;
 
+	private String chartElement;
+	private String chartElementNone;
+	private String pointIndex;
+	private String seriesName;
+	
 	@Override
 	protected void onCreate(Bundle savedInstanceState)
 	{
@@ -32,6 +37,11 @@ public class HitTestActivity extends Activity
 
 		mChart.getAxisY().setFormat("#.##");
 
+		chartElement = this.getResources().getString(R.string.hitTestChartElement);
+		chartElementNone = this.getResources().getString(R.string.hitTestChartElementNone);
+		pointIndex = this.getResources().getString(R.string.hitTestPointIndex);
+		seriesName = this.getResources().getString(R.string.hitTestSeriesName);
+		
 		// initialize series elements and set the binding to variables of
 		// ChartPoint
 		ChartSeries seriesSine = new ChartSeries(mChart, "sin(x)", "y");
@@ -84,10 +94,10 @@ public class HitTestActivity extends Activity
 				String displayText;
 				if (info != null)
 				{
-					displayText = "Chart Element : " + (info.chartElement == null ? "NONE" : info.chartElement.toString());
+					displayText = chartElement + (info.chartElement == null ? chartElementNone : info.chartElement.toString());
 					if (info.dataPoint != null)
 					{
-						displayText += "\nSeries Name : " + info.dataPoint.seriesName + "\n" + "Point Index : " + info.dataPoint.pointIndex;
+						displayText += "\n"+seriesName + info.dataPoint.seriesName + "\n" + pointIndex + info.dataPoint.pointIndex;
 						if (info.dataPoint.xValue != null && info.dataPoint.yValue != null)
 						{
 							displayText += "\nX : " + info.dataPoint.xValue.toString() + " Y : " + info.dataPoint.yValue.toString();

@@ -33,12 +33,14 @@
         <activity android:name="com.grapecity.xuni.samples.flexgrid.samples.EditConfirmationActivity" android:label="@string/editConfirm"></activity>
         <activity android:name="com.grapecity.xuni.samples.flexgrid.samples.CustomCellsActivity" android:label="@string/customCells"></activity>
         <activity android:name="com.grapecity.xuni.samples.flexgrid.samples.GroupingActivity" android:label="@string/grouping"></activity>
+        <activity android:name="com.grapecity.xuni.samples.flexgrid.samples.RowDetailsActivity" android:configChanges="orientation|screenSize" android:label="@string/rowDetails"></activity>
         <activity android:name="com.grapecity.xuni.samples.flexgrid.samples.FilterActivity" android:configChanges="orientation|screenSize" android:label="@string/filter"></activity>
         <activity android:name="com.grapecity.xuni.samples.flexgrid.samples.FullFilterActivity" android:label="@string/fullFilter"></activity>
         <activity android:name="com.grapecity.xuni.samples.flexgrid.samples.ColumnLayoutActivity" android:configChanges="orientation|screenSize" android:label="@string/columnLayout"></activity>
         <activity android:name="com.grapecity.xuni.samples.flexgrid.samples.ConditionalFormattingActivity" android:label="@string/conditionalFormatting"></activity>
         <activity android:name="com.grapecity.xuni.samples.flexgrid.samples.StarSizingActivity" android:label="@string/starSizing"></activity>
         <activity android:name="com.grapecity.xuni.samples.flexgrid.samples.CellFreezingActivity" android:label="@string/cellFreezing"></activity>
+        <activity android:name="com.grapecity.xuni.samples.flexgrid.samples.CustomMergingActivity" android:label="@string/customMerging"></activity>
         <activity android:name="com.grapecity.xuni.samples.flexgrid.samples.OnDemandActivity" android:label="@string/onDemand"></activity>
     </application>
 

@@ -12,16 +12,13 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.grapecity.xuni.samples.flexgrid.R;
-import com.grapecity.xuni.samples.flexgrid.R.drawable;
-import com.grapecity.xuni.samples.flexgrid.R.id;
-import com.grapecity.xuni.samples.flexgrid.R.layout;
-import com.grapecity.xuni.samples.flexgrid.R.string;
 import com.grapecity.xuni.samples.flexgrid.data.SampleModel;
 import com.grapecity.xuni.samples.flexgrid.samples.CellFreezingActivity;
 import com.grapecity.xuni.samples.flexgrid.samples.ColumnDefinitionsActivity;
 import com.grapecity.xuni.samples.flexgrid.samples.ColumnLayoutActivity;
 import com.grapecity.xuni.samples.flexgrid.samples.ConditionalFormattingActivity;
 import com.grapecity.xuni.samples.flexgrid.samples.CustomCellsActivity;
+import com.grapecity.xuni.samples.flexgrid.samples.CustomMergingActivity;
 import com.grapecity.xuni.samples.flexgrid.samples.EditConfirmationActivity;
 import com.grapecity.xuni.samples.flexgrid.samples.EditingActivity;
 import com.grapecity.xuni.samples.flexgrid.samples.FilterActivity;
@@ -29,6 +26,7 @@ import com.grapecity.xuni.samples.flexgrid.samples.FullFilterActivity;
 import com.grapecity.xuni.samples.flexgrid.samples.GettingStartedActivity;
 import com.grapecity.xuni.samples.flexgrid.samples.GroupingActivity;
 import com.grapecity.xuni.samples.flexgrid.samples.OnDemandActivity;
+import com.grapecity.xuni.samples.flexgrid.samples.RowDetailsActivity;
 import com.grapecity.xuni.samples.flexgrid.samples.SelectionModesActivity;
 import com.grapecity.xuni.samples.flexgrid.samples.StarSizingActivity;
 
@@ -64,6 +62,9 @@ public class SampleListAdapter extends BaseAdapter
 		SampleModel grouping = new SampleModel(context.getResources().getString(R.string.grouping), context.getResources().getString(R.string.groupingDesc),
 				R.drawable.flexgrid_grouping, GroupingActivity.class);
 		
+		SampleModel rowDetails = new SampleModel(context.getResources().getString(R.string.rowDetails), context.getResources().getString(
+				R.string.rowDetailsDesc), R.drawable.flexgrid, RowDetailsActivity.class);
+		
 		SampleModel filter = new SampleModel(context.getResources().getString(R.string.filter), context.getResources().getString(R.string.filterDesc),
 				R.drawable.flexgrid_filter, FilterActivity.class);
 		
@@ -81,6 +82,9 @@ public class SampleListAdapter extends BaseAdapter
 		
 		SampleModel cellFreezing = new SampleModel(context.getResources().getString(R.string.cellFreezing), context.getResources().getString(
 				R.string.cellFreezingDesc), R.drawable.flexgrid_freezing, CellFreezingActivity.class);
+		
+		SampleModel cellMerging = new SampleModel(context.getResources().getString(R.string.customMerging), context.getResources().getString(
+				R.string.customMergingDesc), R.drawable.flexgrid_merging, CustomMergingActivity.class);
 
 		SampleModel onDemand = new SampleModel(context.getResources().getString(R.string.onDemand), context.getResources().getString(
 				R.string.onDemandDesc), R.drawable.flexgrid_loading, OnDemandActivity.class);
@@ -93,12 +97,14 @@ public class SampleListAdapter extends BaseAdapter
 		mList.add(editConfirmation);
 		mList.add(customCells);
 		mList.add(grouping);
+		mList.add(rowDetails);
 		mList.add(filter);
 		mList.add(fullFilter);
 		mList.add(columnLayout);
 		mList.add(conditionalFormatting);
 		mList.add(starSizing);
 		mList.add(cellFreezing);
+		mList.add(cellMerging);
 		mList.add(onDemand);
 	}
 

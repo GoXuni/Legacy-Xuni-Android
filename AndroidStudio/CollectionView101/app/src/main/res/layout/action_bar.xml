@@ -1,0 +1,16 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="right"
+    android:enabled="false"
+    android:gravity="right"
+    android:orientation="horizontal" >
+    
+    <ImageView
+        android:id="@+id/actionView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="right"
+        android:src="@drawable/ic_sort_ascending" />
+
+</LinearLayout>

@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">FlexPie101</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="getting_started">FlexPie の基本機能</string>
+    <string name="basic_features">基本機能</string>
+    <string name="legend_and_titles">凡例とタイトル</string>
+    <string name="selection">選択</string>
+    <string name="theming">テーマ</string>
+    <string name="snapshot">画像として保存</string>
+    <string name="update_animation">アニメーション</string>
+    <string name="data_labels">データラベル</string>
+    <string name="custom_tooltip">カスタムツールチップ</string>
+    <string name="getting_started_desc">ツールチップを備えた円グラフを表示</string>
+    <string name="basic_features_desc">内側半径、オフセット、開始角度</string>
+    <string name="legend_and_titles_desc">ヘッダ、フッタ、凡例の配置</string>
+    <string name="selection_desc">選択アニメーション、オフセットなど</string>
+    <string name="theming_desc_desc">使用可能なパレットを表示</string>
+    <string name="snapshot_desc">FlexPie を画像として保存する方法</string>
+    <string name="snapshotStored">画像をデバイスに保存しました</string>
+    <string name="update_animation_desc">ロードおよび更新アニメーションモード</string>
+    <string name="data_labels_desc">静的なデータラベルを表示</string>
+    <string name="custom_tooltip_desc">カスタマイズされたツールチップを表示</string>
+    <string name="inner_radius">Inner Radius</string>
+    <string name="offset">オフセット</string>
+    <string name="start_angle">開始角度</string>
+    <string name="reversed">反転する</string>
+    <string name="minus">-</string>
+    <string name="plus">+</string>
+    <string name="header">ヘッダ</string>
+    <string name="footer">フッタ</string>
+    <string name="header_value">果物の生産量</string>
+    <string name="footer_value">2015 グレープシティ(株)</string>
+    <string name="legend_position">凡例を表示する位置</string>
+    <string name="item_offset">選択された項目のオフセット位置</string>
+    <string name="position">位置</string>
+    <string name="animated">アニメーション効果を適用</string>
+    <string name="animation_mode">ロード時のアニメーションモード</string>
+    <string name="actionSnapshot">画像を取得</string>
+    <string name="button2015">2015</string>
+    <string name="button2014">2014</string>
+    <string name="button2013">2013</string>
+    <string name="button2012">2012</string>
+
+    <string-array name="legend_spinner_values">
+      <item>表示しない(None)</item>
+      <item>左側に表示(Left)</item>
+      <item>上部に表示(Top)</item>
+      <item>右側に表示(Right)</item>
+      <item>下部に表示(Bottom)</item>
+      <item>自動で決定(Auto)</item>
+    </string-array>
+
+    <string-array name="selection_spinner_values">
+        <item>表示しない(None)</item>
+        <item>左側に表示(Left)</item>
+        <item>上部に表示(Top)</item>
+        <item>右側に表示(Right)</item>
+        <item>下部に表示(Bottom)</item>
+    </string-array>
+
+    <string-array name="theme_spinner_values">
+        <item>Standard(標準のカラーパレット)</item>
+        <item>Cocoa</item>
+        <item>Coral</item>
+        <item>Dark</item>
+        <item>HighContrast</item>
+        <item>Light</item>
+        <item>Midnight</item>
+        <item>Minimal</item>
+        <item>Organic</item>
+        <item>Slate</item>
+        <item>Zen</item>
+        <item>Cyborg</item>
+        <item>Superhero</item>
+        <item>Flatly</item>
+        <item>Darkly</item>
+        <item>Cerulean</item>
+    </string-array>
+
+    <string-array name="animation_spinner_values">
+      <item>データ点ごと(Point)</item>
+      <item>すべて同時(All)</item>
+    </string-array>
+
+    <string-array name="dataLabelSpinnerValues">
+        <item>ラベル表示なし(None)</item>
+        <item>中央に表示(Center)</item>
+        <item>内側に表示(Inside)</item>
+        <item>外側に表示(Outside)</item>
+    </string-array>
+
+</resources>

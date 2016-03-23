@@ -5,7 +5,7 @@
     android:versionName="1.0" >
 
     <uses-sdk
-        android:minSdkVersion="14"
+        android:minSdkVersion="18"
         android:targetSdkVersion="22" />
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
 
@@ -48,6 +48,7 @@
         <activity android:name=".SnapshotActivity" android:label="@string/snapshot" android:configChanges="orientation|screenSize"></activity>
         <activity android:name=".ScrollingActivity" android:label="@string/scrolling" android:configChanges="orientation|screenSize"></activity>
         <activity android:name=".CustomMarkerActivity" android:label="@string/customMarker"></activity>
+        <activity android:name=".AnnotationActivity" android:label="@string/annotation"></activity>
     </application>
 
 </manifest>

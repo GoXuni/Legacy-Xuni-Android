@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">CollectionView101</string>
+    <string name="sorting">Sorting</string>
+    <string name="sorting_desc">Sort a list of items from the action bar.</string>
+    
+    <string name="filtering">Filtering</string>
+    <string name="filtering_desc">Filters a list of items by typing in an Entry.</string>
+    <string name="filter_hint">Enter text to filter.</string>
+    
+    <string name="grouping">Grouping</string>
+    <string name="grouping_desc">Displays a grouped list of YouTube videos.</string>
+    
+    <string name="simple_on_demand">Simple On Demand</string>
+    <string name="simple_on_demand_desc">Shows on-demand loading with a ListView.</string>
+    
+    <string name="on_demand">YouTube On Demand</string>
+    <string name="on_demand_desc">Shows on-demand loading with YouTube API.</string>
+    
+</resources>

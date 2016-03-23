@@ -34,7 +34,7 @@ public class GettingStartedActivity extends Activity
 		mGrid.getColumns().getColumn("lastOrderDate").setFormat("MM/dd/yyyy");
 
 		GridColumn countryColumn = mGrid.getColumns().getColumn("countryId");
-		countryColumn.setName("country");
+		countryColumn.setName("Country");
 		countryColumn.setDataMap(new GridDataMap(Customer.getCounties(), "countryId", "countryName"));
 		countryColumn.setShowDropDown(true);
 

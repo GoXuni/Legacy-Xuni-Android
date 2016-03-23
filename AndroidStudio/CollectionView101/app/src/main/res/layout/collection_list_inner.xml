@@ -1,0 +1,24 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/collection_list_inner"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <ImageView
+        android:id="@+id/youtubeImage"
+        android:layout_width="120dp"
+        android:layout_height="90dp"
+        android:contentDescription="@null"
+        android:gravity="center_vertical"
+        android:padding="7dp" />
+
+    <TextView
+        android:id="@+id/yoububeDescription"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/youtubeImage"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+       
+        android:padding="5dp" />
+
+  
+</RelativeLayout>
