@@ -40,6 +40,7 @@ public class GroupingActivity extends Activity
 
 		// group on the country column
 		mGrid.getCollectionView().getGroupDescriptions().add(new PropertyGroupDescription("countryId"));
+		mGrid.setGroupHeaderFormat(getResources().getString(R.string.groupHeaderFormat));
 
 		GridColumn activeColumn = new GridColumn(mGrid, "Active", "active");
 		activeColumn.setDataType(DataType.BOOLEAN);

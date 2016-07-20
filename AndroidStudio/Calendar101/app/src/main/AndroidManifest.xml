@@ -29,6 +29,7 @@
         <activity android:name="CustomAppearanceActivity" android:label="@string/custom_appearance"></activity>
         <activity android:name="PopupEditorActivity" android:label="@string/popup_editor"></activity>
         <activity android:name="CustomSelectionActivity" android:label="@string/custom_selection"></activity>
+        <activity android:name="CustomHeaderTextActivity" android:label="@string/custom_header_text"></activity>
     </application>
 
 </manifest>

@@ -19,8 +19,6 @@ import com.grapecity.xuni.flexchart.FlexChart;
 
 public class UpdateAnimationActivity extends BaseActivity
 {
-
-	private ObservableList<ChartPoint> mList;
 	private Spinner mChartTypeSpinner;
 	private Spinner mUpdatePositionSpinner;
 	private FlexChart mChart;
@@ -171,23 +169,23 @@ public class UpdateAnimationActivity extends BaseActivity
 				switch (mUpdatePosition)
 				{
 					case 0:
-						mList.add(0, new ChartPoint(Character.valueOf((char) (mRandom.nextInt(26) + 65)), mRandom.nextInt(mMaxValue)));
+						dataSource.add(0, new ChartPoint(Character.valueOf((char) (mRandom.nextInt(26) + 65)), mRandom.nextInt(mMaxValue)));
 						break;
 					case 1:
-						mList.add((mList.size() / 2), new ChartPoint(Character.valueOf((char) (mRandom.nextInt(26) + 65)), mRandom.nextInt(mMaxValue)));
+						dataSource.add((dataSource.size() / 2),
+								new ChartPoint(Character.valueOf((char) (mRandom.nextInt(26) + 65)), mRandom.nextInt(mMaxValue)));
 						break;
 					case 2:
-						mList.add(new ChartPoint(Character.valueOf((char) (mRandom.nextInt(26) + 65)), mRandom.nextInt(mMaxValue)));
+						dataSource.add(new ChartPoint(Character.valueOf((char) (mRandom.nextInt(26) + 65)), mRandom.nextInt(mMaxValue)));
 						break;
 				}
-				if (mList.size() > mMinSeriesLimit)
+				if (dataSource.size() > mMinSeriesLimit)
 					mButtonRemovePosition.setEnabled(true);
 			}
 		});
 
 		mButtonRemovePosition.setOnClickListener(new OnClickListener()
 		{
-
 			@Override
 			public void onClick(View v)
 			{
@@ -195,16 +193,16 @@ public class UpdateAnimationActivity extends BaseActivity
 				switch (mUpdatePosition)
 				{
 					case 0:
-						mList.remove(0);
+						dataSource.remove(0);
 						break;
 					case 1:
-						mList.remove((mList.size() / 2));
+						dataSource.remove((dataSource.size() / 2));
 						break;
 					case 2:
-						mList.remove(mList.size() - 1);
+						dataSource.remove(dataSource.size() - 1);
 						break;
 				}
-				if (mList.size() <= mMinSeriesLimit)
+				if (dataSource.size() <= mMinSeriesLimit)
 					mButtonRemovePosition.setEnabled(false);
 			}
 		});
@@ -213,7 +211,7 @@ public class UpdateAnimationActivity extends BaseActivity
 	// a method to create a list of random objects
 	private ObservableList<ChartPoint> getList()
 	{
-		mList = new ObservableList<ChartPoint>();
+		ObservableList<ChartPoint> mList = new ObservableList<ChartPoint>();
 
 		int n = 10; // number of series elements
 

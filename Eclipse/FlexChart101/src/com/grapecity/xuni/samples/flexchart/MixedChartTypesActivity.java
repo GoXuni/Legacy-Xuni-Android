@@ -36,5 +36,8 @@ public class MixedChartTypesActivity extends Activity
 		// setting the source of data/items and default values in FlexChart
 		mChart.setItemsSource(ChartPoint.getList());
 		seriesDownloads.setChartType(ChartType.LINE);
+		
+		mChart.getAxisX().setMajorTickWidth(0);
+		mChart.getAxisX().setMinorTickWidth(1);
 	}
 }

@@ -1,5 +1,6 @@
 package com.grapecity.xuni.samples.flexchart;
 
+import android.graphics.Color;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
@@ -60,6 +61,9 @@ public class BasicChartTypesActivity extends BaseActivity
 			dataSource = ChartPoint.getList();
 		}
 		mChart.setItemsSource(dataSource);
+		
+//		mChart.setPadding(100, 100, 100, 100);
+//		mChart.setBackgroundColor(Color.GRAY);
 
 		// create custom adapter for first spinner and initialize with string
 		// array

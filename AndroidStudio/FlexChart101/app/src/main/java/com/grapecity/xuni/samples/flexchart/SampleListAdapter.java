@@ -70,6 +70,8 @@ public class SampleListAdapter extends BaseAdapter
 				R.string.customMarkerDesc), R.drawable.chart_marker, CustomMarkerActivity.class);
 		SampleModel customizingAxesLabelActivity = new SampleModel(context.getResources().getString(R.string.customizingAxesLabel), context.getResources()
 				.getString(R.string.customizingAxesLabelDesc), R.drawable.chart_axes, CustomizingAxesLabelActivity.class);
+		SampleModel logActivity = new SampleModel(context.getResources().getString(R.string.scaling), context.getResources()
+				.getString(R.string.scalingDesc), R.drawable.chart_axes, LogarithmicActivity.class);
 		SampleModel annotation = new SampleModel(context.getResources().getString(R.string.annotation), context.getResources().getString(
 				R.string.annotationDesc), R.drawable.chart_annotation, AnnotationActivity.class);
 		
@@ -98,6 +100,7 @@ public class SampleListAdapter extends BaseAdapter
 		list.add(zoomingAndScrolling);
 		list.add(theming);
 		list.add(stylingSeries);
+		//list.add(logActivity);
 		list.add(snapshotActivity);
 	}
 

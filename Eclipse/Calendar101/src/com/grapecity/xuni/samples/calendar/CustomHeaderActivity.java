@@ -101,8 +101,17 @@ public class CustomHeaderActivity extends Activity
 
 	private void updateHeader()
 	{
-		String format = calendar.getViewMode() == CalendarViewMode.Month ? "yyyy MMMM" : "yyyy";
-		SimpleDateFormat formatter = new SimpleDateFormat(format, Locale.getDefault());
+		Locale locale = Locale.getDefault();
+		String format;
+		if (locale.getLanguage().equals("ja") || locale.getLanguage().equals("zh"))
+		{
+			format = calendar.getViewMode() == CalendarViewMode.Month ? "yyyy年M月" : "yyyy年";
+		}
+		else
+		{
+			format = calendar.getViewMode() == CalendarViewMode.Month ? "MMMM yyyy" : "yyyy";
+		}
+		SimpleDateFormat formatter = new SimpleDateFormat(format, locale);
 		tvHeader.setText(formatter.format(calendar.getDisplayDate()));
 	}
 }

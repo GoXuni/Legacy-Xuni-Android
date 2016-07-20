@@ -42,6 +42,9 @@
         <activity android:name="com.grapecity.xuni.samples.flexgrid.samples.CellFreezingActivity" android:label="@string/cellFreezing"></activity>
         <activity android:name="com.grapecity.xuni.samples.flexgrid.samples.CustomMergingActivity" android:label="@string/customMerging"></activity>
         <activity android:name="com.grapecity.xuni.samples.flexgrid.samples.OnDemandActivity" android:label="@string/onDemand"></activity>
+        <activity android:name="com.grapecity.xuni.samples.flexgrid.samples.NewRowActivity" android:label="@string/newRow"></activity>
+         <activity android:name="com.grapecity.xuni.samples.flexgrid.samples.UnboundActivity" android:label="@string/unbound"></activity>
+        
     </application>
 
 </manifest>

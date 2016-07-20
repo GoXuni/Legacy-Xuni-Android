@@ -10,6 +10,8 @@
     <string name="custom_day_content_desc">Shows how to customize a day slot to show custom content.</string>
     <string name="custom_header">Custom Header</string>
     <string name="custom_header_desc">Shows a custom header inspired by a popular Android or iOS calendar app.</string>
+    <string name="custom_header_text">Custom Header Text</string>
+    <string name="custom_header_text_desc">Shows a custom header text by HeaderLoading event and HeaderMonthFormat property.</string>
     <string name="custom_appearance">Custom Appearance</string>
     <string name="custom_appearance_desc">Shows a calendar with a custom style.</string>
     <string name="popup_editor">Popup Editor</string>

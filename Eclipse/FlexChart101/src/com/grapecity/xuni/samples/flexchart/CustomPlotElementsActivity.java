@@ -47,6 +47,9 @@ public class CustomPlotElementsActivity extends Activity
 		mChart.getAxisY().setAxisLineVisible(false);
 		// Set axis Y minor tick marker invisible.
 		mChart.getAxisY().setMinorTickWidth(0);
+		
+		mChart.getAxisX().setMajorTickWidth(0);
+		mChart.getAxisX().setMinorTickWidth(1);
 				
 		// handler to override the existing call() which is called before
 		// rendering each chart element and customize the required elements

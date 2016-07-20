@@ -67,7 +67,15 @@ public class FilterCellFactory extends GridCellFactory
 			this.mCellHeight = bounds.height();
 			mTextView.setLayoutParams(new LayoutParams(mCellWidth - (mPaddingLeft * 2), mCellHeight - (mPaddingTop * 2)));
 
+			GridCellRange editRange = gridPanel.getFlexGrid().getEditRange();
+			
 			String displayString = getFilterVariable(mChartPoint, gridPanel.getColumns().get(cellRange.col).getBinding());
+			if(editRange.col == cellRange.col && editRange.row == cellRange.row)
+			{
+				displayString = "";
+			}
+			
+			
 			mSpanText = Spannable.Factory.getInstance().newSpannable(displayString);
 
 			// setting boundaries for highlight

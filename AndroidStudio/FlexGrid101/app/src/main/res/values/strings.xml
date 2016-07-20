@@ -18,6 +18,7 @@
     <string name="cellFreezing">Cell Freezing &amp; Merging</string>
     <string name="customMerging">Custom Merging</string>
     <string name="onDemand">On Demand</string>
+    <string name="newRow">New Row</string>
     <string name="gettingStartedDesc">Display, edit and aggregate your data all at once with FlexGrid</string>
     <string name="columnDefinitionsDesc">Shows how to specify and format columns</string>
     <string name="selectionModesDesc">Shows the various cell selection modes</string>
@@ -31,9 +32,12 @@
     <string name="columnLayoutDesc">Shows the column manager to modify the column layout</string>
     <string name="conditionalFormattingDesc">Uses a CellFactory to apply conditional formatting</string>
     <string name="starSizingDesc">Shows a responsive column layout that uses star sizing</string>
-    <string name="cellFreezingDesc">Shows frozen columns, rows, and cell merging.</string>
+    <string name="cellFreezingDesc">Shows frozen columns, rows, and cell merging</string>
     <string name="customMergingDesc">Shows a grid with custom cell merging.</string>
     <string name="onDemandDesc">Load items on demand as the user scrolls down the grid</string>
+    <string name="newRowDesc">Shows how to edit the new row</string>
+    <string name="unbound">Unbound</string>
+    <string name="unboundDesc">Add empty rows and columns to create an unbound grid</string>
     <string name="editRow">Edit Row</string>
     <string name="editColumns">Edit Columns</string>
     <string name="id">ID</string>
@@ -61,7 +65,8 @@
     <string name="editRowToast">Select a row to edit</string>
     <string name="noInternet">No internet connection available.</string>
     <string name="android">android development</string>
-  <string name="selectFilterTitle">Select Filter</string>
+  	<string name="selectFilterTitle">Select Filter</string>
+  <string name="groupHeaderFormat">{name}: {value} ({count} items)</string>
 
     <string name="monday">Monday</string>
     <string name="tuesday">Tuesday</string>

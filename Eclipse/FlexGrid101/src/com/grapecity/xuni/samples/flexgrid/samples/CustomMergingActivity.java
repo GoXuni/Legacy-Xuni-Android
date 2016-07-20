@@ -101,9 +101,9 @@ public class CustomMergingActivity extends Activity
 		mGrid.setCellValue(4, 2, "News");
 		mGrid.setCellValue(4, 3, "News");
 		mGrid.setCellValue(4, 4, "News");
-		mGrid.setCellValue(5, 0, "Weel of Fortune");
-		mGrid.setCellValue(5, 1, "Weel of Fortune");
-		mGrid.setCellValue(5, 2, "Weel of Fortune");
+		mGrid.setCellValue(5, 0, "Wheel of Fortune");
+		mGrid.setCellValue(5, 1, "Wheel of Fortune");
+		mGrid.setCellValue(5, 2, "Wheel of Fortune");
 		mGrid.setCellValue(5, 3, "Jeopardy");
 		mGrid.setCellValue(5, 4, "Jeopardy");
 		mGrid.setCellValue(5, 5, "Movie");

@@ -80,12 +80,12 @@
     </string-array>
 
     <string-array name="animation_spinner_values">
-      <item>データ点ごと(Point)</item>
       <item>すべて同時(All)</item>
+      <item>データ点ごと(Point)</item>
     </string-array>
 
     <string-array name="dataLabelSpinnerValues">
-        <item>ラベル表示なし(None)</item>
+        <item>表示しない(None)</item>
         <item>中央に表示(Center)</item>
         <item>内側に表示(Inside)</item>
         <item>外側に表示(Outside)</item>

@@ -25,10 +25,12 @@ import com.grapecity.xuni.samples.flexgrid.samples.FilterActivity;
 import com.grapecity.xuni.samples.flexgrid.samples.FullFilterActivity;
 import com.grapecity.xuni.samples.flexgrid.samples.GettingStartedActivity;
 import com.grapecity.xuni.samples.flexgrid.samples.GroupingActivity;
+import com.grapecity.xuni.samples.flexgrid.samples.NewRowActivity;
 import com.grapecity.xuni.samples.flexgrid.samples.OnDemandActivity;
 import com.grapecity.xuni.samples.flexgrid.samples.RowDetailsActivity;
 import com.grapecity.xuni.samples.flexgrid.samples.SelectionModesActivity;
 import com.grapecity.xuni.samples.flexgrid.samples.StarSizingActivity;
+import com.grapecity.xuni.samples.flexgrid.samples.UnboundActivity;
 
 public class SampleListAdapter extends BaseAdapter
 {
@@ -86,8 +88,13 @@ public class SampleListAdapter extends BaseAdapter
 		SampleModel cellMerging = new SampleModel(context.getResources().getString(R.string.customMerging), context.getResources().getString(
 				R.string.customMergingDesc), R.drawable.flexgrid_merging, CustomMergingActivity.class);
 
+		SampleModel unbound = new SampleModel(context.getResources().getString(R.string.unbound), context.getResources().getString(
+				R.string.unboundDesc), R.drawable.flexgrid_merging, UnboundActivity.class);
 		SampleModel onDemand = new SampleModel(context.getResources().getString(R.string.onDemand), context.getResources().getString(
 				R.string.onDemandDesc), R.drawable.flexgrid_loading, OnDemandActivity.class);
+		
+		SampleModel newRow = new SampleModel(context.getResources().getString(R.string.newRow), context.getResources().getString(
+				R.string.newRowDesc), R.drawable.flexgrid, NewRowActivity.class);
 
 		// adding objects to list
 		mList.add(gettingStarted);
@@ -105,7 +112,9 @@ public class SampleListAdapter extends BaseAdapter
 		mList.add(starSizing);
 		mList.add(cellFreezing);
 		mList.add(cellMerging);
+		mList.add(unbound);
 		mList.add(onDemand);
+		//mList.add(newRow);
 	}
 
 	@Override

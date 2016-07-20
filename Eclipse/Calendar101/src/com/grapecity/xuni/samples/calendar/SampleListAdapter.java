@@ -36,6 +36,8 @@ public class SampleListAdapter extends BaseAdapter
 				R.string.popup_editor_desc), R.drawable.calendar_datepicker);
 		SampleModel customerSelection = new SampleModel(context.getResources().getString(R.string.custom_selection), context.getResources().getString(
 				R.string.custom_selection_desc), R.drawable.calendar2);
+		SampleModel customHeaderText = new SampleModel(context.getResources().getString(R.string.custom_header_text), context.getResources().getString(
+				R.string.custom_header_text_desc), R.drawable.calendar);
 
 		// adding objects to list
 		mList.add(gettingStarted);
@@ -45,6 +47,7 @@ public class SampleListAdapter extends BaseAdapter
 		mList.add(customAppearance);
 		mList.add(popupEditor);
 		mList.add(customerSelection);
+		//mList.add(customHeaderText);
 	}
 
 	@Override

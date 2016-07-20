@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">CollectionView101</string>
+    <string name="sorting">ソート</string>
+    <string name="sorting_desc">アクションバーを操作して項目をソート</string>
+    
+    <string name="filtering">フィルター処理</string>
+    <string name="filtering_desc">テキストを入力して項目をフィルタリング</string>
+    <string name="filter_hint">フィルタリングするテキストを入力</string>
+    
+    <string name="grouping">グループ化</string>
+    <string name="grouping_desc">リストをグループ化して表示</string>
+    
+    <string name="simple_on_demand">シンプルオンデマンド</string>
+    <string name="simple_on_demand_desc">表示時にデータを要求してリストビューに読み込み</string>
+    
+    <string name="on_demand">YouTube オンデマンド</string>
+    <string name="on_demand_desc">YouTube APIを使用したロードオンデマンド</string>
+    
+</resources>

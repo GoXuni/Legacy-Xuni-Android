@@ -17,7 +17,7 @@ import com.grapecity.xuni.core.ObservableList;
 public class ChartPoint implements Serializable
 {
 	private static final long serialVersionUID = 1L;
-	
+
 	protected String name;
 	protected Date date;
 	protected int sales;
@@ -214,6 +214,24 @@ public class ChartPoint implements Serializable
 		for (int i = 0; i < n; i++)
 		{
 			list.add(new ChartPoint(countries[i], random.nextInt(20000), random.nextInt(20000), random.nextInt(20000)));
+		}
+		return list;
+	}
+
+	public static ObservableList<ChartPoint> getLogList()
+	{
+		ObservableList<ChartPoint> list = new ObservableList<ChartPoint>();
+
+		int n = 6; // number of series elements
+		String[] countries =
+		{ "US", "Germany", "UK", "Japan", "Italy", "Greece", "India", "Canada" };
+		Random random = new Random();
+
+		for (int i = 0; i < n; i++)
+		{
+			int scale = random.nextInt(14);
+			scale = (int) Math.exp((double) scale);
+			list.add(new ChartPoint(countries[i], random.nextInt(scale), random.nextInt(scale), random.nextInt(scale)));
 		}
 		return list;
 	}

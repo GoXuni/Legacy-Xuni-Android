@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.grapecity.xuni.samples.input"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk
+        android:minSdkVersion="14"
+        android:targetSdkVersion="22" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/icon"
+        android:label="@string/app_name"
+        android:theme="@android:style/Theme.Holo.Light" >
+        <activity
+            android:name="com.grapecity.xuni.samples.input.MainActivity"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name="BasicMaskActivity" android:label="@string/basic_mask"></activity>
+        <activity android:name="DropDownActivity" android:label="@string/dropdown"/>
+        <activity android:name="ComboBoxActivity" android:label="@string/combobox"/>
+       <activity android:name="AutoCompleteActivity" android:label="@string/autocomplete"/>
+    </application>
+
+</manifest>

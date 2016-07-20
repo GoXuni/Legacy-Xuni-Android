@@ -63,6 +63,9 @@ public class CustomizingAxesLabelActivity extends Activity
 		mChart.getAxisY().setMinorTickWidth(1);
 		mChart.getAxisY().setMajorUnit(2000d);
 
+		mChart.getAxisX().setMajorTickWidth(0);
+		mChart.getAxisX().setMinorTickWidth(1);
+		
 		mChart.getAxisY().getLabelLoading().addHandler(new IEventHandler()
 		{
 			@Override

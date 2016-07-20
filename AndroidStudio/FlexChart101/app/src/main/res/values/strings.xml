@@ -52,7 +52,10 @@
     <string name="customPlotElementsDesc">Shows how to fully customize plot elements</string>
     <string name="conditionalFormattingDesc">Shows conditional formatting by customizing plot elements</string>
     <string name="updateAnimationDesc">Shows animation when data is updated</string>
-    <string name="snapshotDesc">Shows how to export an image of FlexChart</string>
+    <string name="snapshotDesc">Shows how to export an image of FlexChart</string>    
+    <string name="scaling">Chart Scaling</string>
+    <string name="scalingDesc">Shows how to use logarithmic axes to spread clustered data</string>
+    
     <string name="chartType">Chart Type</string>
     <string name="stacking">Stacking</string>
     <string name="rotated">Rotated?</string>

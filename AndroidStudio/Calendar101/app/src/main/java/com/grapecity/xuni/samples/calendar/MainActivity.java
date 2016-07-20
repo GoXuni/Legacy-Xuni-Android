@@ -55,6 +55,9 @@ public class MainActivity extends Activity implements OnItemClickListener
 			case 6:
 				intent = new Intent(getApplicationContext(), CustomSelectionActivity.class);
 				break;
+			case 7:
+				intent = new Intent(getApplicationContext(), CustomHeaderTextActivity.class);
+				break;
 		}
 		// start the new activity
 		startActivity(intent);

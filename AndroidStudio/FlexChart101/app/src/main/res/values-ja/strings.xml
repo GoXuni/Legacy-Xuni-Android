@@ -87,8 +87,8 @@
   <string name="hitTestChartElementNone">要素なし</string>
   <string name="hitTestPointIndex">データ点インデックス：</string>
   <string name="hitTestSeriesName">系列名：</string>
-  <string name="annotation">Annotation</string>
-  <string name="annotationDesc">Shows a chart with different kinds of annotations</string>
+  	<string name="annotation">注釈</string>
+  	<string name="annotationDesc">チャートにさまざまな形の注釈を表示</string>
     
     <string-array name="chartTypeSpinnerValues">
     <item>面、エリア(Area)</item>

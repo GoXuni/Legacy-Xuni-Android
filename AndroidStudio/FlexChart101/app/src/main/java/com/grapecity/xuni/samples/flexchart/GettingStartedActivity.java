@@ -39,5 +39,8 @@ public class GettingStartedActivity extends Activity
 
 		// setting the source of data/items in FlexChart
 		mChart.setItemsSource(ChartPoint.getList());
+		
+		mChart.getAxisX().setMajorTickWidth(0);
+		mChart.getAxisX().setMinorTickWidth(1);
 	}
 }
